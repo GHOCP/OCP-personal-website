@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Background Colors */
+  --background-design: #3B875C;
+  --background-research: #812418;
+  --background-writing: #2C3559;
+  --background-photos: #B79A1A;
+  --background-grey-1: #A9A9A9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* Tablet (768px+) */
+@media (min-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --page-pl: 2rem;
+    /* pl-6 */
+    --page-pt: 3rem;
+    /* pt-9 */
+    --page-pr: 4rem;
+    /* pr-12 */
+    --page-pb: 8rem;
+    /* pb-24 */
   }
 }
 
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  :root {
+    --page-pl: 5rem;
+    /* pl-10 */
+    --page-pt: 7.5rem;
+    /* pt-12 */
+    --page-pr: 10rem;
+    /* pr-16 */
+    --page-pb: 25rem;
+    /* pb-32 */
+
+    --text-small: 10px;
+    --text-small-line-height: 10px;
+  }
+}
+
+/* Reusable page padding class */
+.responsive-padding-1 {
+  padding-left: var(--page-pl);
+  padding-top: var(--page-pt);
+  padding-right: var(--page-pr);
+  padding-bottom: var(--page-pb);
+}
+
+/* Global responsive asymmetric padding */
+.responsive-padding-2 {
+  /* Base unit in px */
+  --base-unit: clamp(40px, 2vw, 160px);
+
+  padding-left: calc(var(--base-unit) * 1);
+  /* pl */
+  padding-top: calc(var(--base-unit) * 1.5);
+  /* pt */
+  padding-right: calc(var(--base-unit) * 2);
+  /* pr */
+  padding-bottom: calc(var(--base-unit) * 4);
+  /* pb */
+
+  box-sizing: border-box;
+}
+
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+  column-gap: 24px;
+  row-gap: 30px;
+  grid-auto-rows: 130px;
+}
+
+@font-face {
+  font-family: "MyFont-BAG";
+  src: url("../../public/fonts/Berthold-Akzidenz-Grotesk/AkzidenzGroteskBE-Md.woff2") format("woff2"),
+    url("../../public/fonts/Berthold-Akzidenz-Grotesk/AkzidenzGroteskBE-Md.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.page-title-font {
+  font-family: "MyFont-BAG", 'Times New Roman', Times, serif , Helvetica, Inter, Arial, sans-serif;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
