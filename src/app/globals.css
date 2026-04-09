@@ -8,24 +8,57 @@
   --background-writing: #2C3559;
   --background-photos: #B79A1A;
   --background-grey-1: #A9A9A9;
+
+  /* Default (Mobile, <640px) padding */
+  --page-pl: 3rem;
+  /* pl-4 */
+  --page-pt: 8rem;
+  /* pt-6 */
+  --page-pr: 3.5rem;
+  /* pr-6 */
+  --page-pb: 12rem;
+  /* pb-16 */
+
+  /* Grid-Column */
+  --grid-columns: repeat(2, 1fr);
 }
 
-/* Tablet (768px+) */
+/* Tablet, md (768px+) */
 @media (min-width: 768px) {
   :root {
-    --page-pl: 2rem;
+    --page-pl: 1.5rem;
     /* pl-6 */
     --page-pt: 3rem;
     /* pt-9 */
-    --page-pr: 4rem;
+    --page-pr: 4.5rem;
     /* pr-12 */
-    --page-pb: 8rem;
+    --page-pb: 6rem;
     /* pb-24 */
+
+    /* Grid-Column */
+    --grid-columns: repeat(6, 1fr);
   }
 }
 
-/* Desktop (1024px+) */
+/* Desktop, lg (1024px+) */
 @media (min-width: 1024px) {
+  :root {
+    --page-pl: 2rem;
+    /* pl-10 */
+    --page-pt: 4rem;
+    /* pt-12 */
+    --page-pr: 6rem;
+    /* pr-16 */
+    --page-pb: 8rem;
+    /* pb-32 */
+
+    /* Grid-Column */
+    --grid-columns: repeat(6, 1fr);
+  }
+}
+
+/* Desktop, xl (1280px+) */
+@media (min-width: 1280px) {
   :root {
     --page-pl: 5rem;
     /* pl-10 */
@@ -36,10 +69,28 @@
     --page-pb: 25rem;
     /* pb-32 */
 
-    --text-small: 10px;
-    --text-small-line-height: 10px;
+    /* Grid-Column */
+    --grid-columns: repeat(8, 1fr);
   }
 }
+
+/* Desktop, 2xl (1536px+) */
+@media (min-width: 2560px) {
+  :root {
+    --page-pl: 10rem;
+    /* pl-10 */
+    --page-pt: 15rem;
+    /* pt-12 */
+    --page-pr: 20rem;
+    /* pr-16 */
+    --page-pb: 80rem;
+    /* pb-32 */
+
+    /* Grid-Column */
+    --grid-columns: repeat(16, 1fr);
+  }
+}
+
 
 /* Reusable page padding class */
 .responsive-padding-1 {
@@ -62,13 +113,12 @@
   /* pr */
   padding-bottom: calc(var(--base-unit) * 4);
   /* pb */
-
   box-sizing: border-box;
 }
 
 .grid-system {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: var(--grid-columns);
   /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
   column-gap: 24px;
   row-gap: 30px;
@@ -84,7 +134,7 @@
 }
 
 .page-title-font {
-  font-family: "MyFont-BAG", 'Times New Roman', Times, serif , Helvetica, Inter, Arial, sans-serif;
+  font-family: "MyFont-BAG", 'Times New Roman', Times, serif, Helvetica, Inter, Arial, sans-serif;
 }
 
 body {
