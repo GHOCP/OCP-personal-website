@@ -92,6 +92,8 @@
 }
 
 
+
+/* ------------------------- */
 /* Reusable page padding class */
 .responsive-padding-1 {
   padding-left: var(--page-pl);
@@ -116,6 +118,9 @@
   box-sizing: border-box;
 }
 
+
+
+/* ------------------------- */
 .grid-system {
   display: grid;
   grid-template-columns: var(--grid-columns);
@@ -125,6 +130,9 @@
   grid-auto-rows: 130px;
 }
 
+
+
+/* ------------------------- */
 @font-face {
   font-family: "MyFont-BAG";
   src: url("../../public/fonts/Berthold-Akzidenz-Grotesk/AkzidenzGroteskBE-Md.woff2") format("woff2"),
@@ -139,4 +147,23 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ------------------------- */
+@keyframes draw-reveal {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
 }
