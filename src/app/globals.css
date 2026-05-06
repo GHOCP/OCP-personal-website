@@ -124,7 +124,6 @@
 .grid-system {
   display: grid;
   grid-template-columns: var(--grid-columns);
-  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
   column-gap: 24px;
   row-gap: 30px;
   grid-auto-rows: 130px;
@@ -143,6 +142,10 @@
 
 .page-title-font {
   font-family: "MyFont-BAG", 'Times New Roman', Times, serif, Helvetica, Inter, Arial, sans-serif;
+}
+
+.page-semi-title-font {
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 body {

@@ -90,6 +90,7 @@ export default function Home() {
             />
           </svg>
         </div>
+
         <div
           className="relative bg-(--background-research)
           group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
@@ -125,6 +126,7 @@ export default function Home() {
             />
           </svg>
         </div>
+
         <div
           className="relative bg-(--background-photos)
           group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2 
@@ -160,6 +162,7 @@ export default function Home() {
             />
           </svg>
         </div>
+        
         <div
           className="relative bg-(--background-design) 
           group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
