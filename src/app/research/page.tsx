@@ -3,7 +3,7 @@ import ResearchItem from "@/components/ResearchItem";
 export default function ResearchPage() {
   return (
     <main className="min-h-screen responsive-padding-1 bg-(--background-research) relative">
-      <div className="absolute left-2 top-2 w-30 h-30 overflow-hidden pointer-events-none group">
+      <div className="fixed left-2 top-2 w-40 h-40 overflow-hidden pointer-events-none group z-99">
         <svg
           className="w-full h-auto max-w-lg absolute bottom-0
               transition-all duration-500 ease-out

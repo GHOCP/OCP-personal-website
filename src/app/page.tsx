@@ -2,7 +2,7 @@
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black responsive-padding-1">
+    <main className="fixed inset-0 overflow-hidden bg-black responsive-padding-1">
       <section className="relative grid-system">
         {/* Title */}
         <header className="mb-6 text-white">
@@ -162,7 +162,7 @@ export default function Home() {
             />
           </svg>
         </div>
-        
+
         <div
           className="relative bg-(--background-design) 
           group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2

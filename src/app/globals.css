@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
-:root {
+/*
+sm:   <640px default  | 2cols
+md:   768px+          | 6cols  
+lg:   1024px+         | 8cols
+xl:   1280px+         | 8cols
+2xl:  1536px+         | 8cols
+*/
 
+:root {
   /* Background Colors */
   --background-design: #3B875C;
   --background-research: #812418;
@@ -152,6 +159,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* ------------------------- */
+@layer components {
+  .page-semi-title-size {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .page-date-size {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
 
 
 /* ------------------------- */
