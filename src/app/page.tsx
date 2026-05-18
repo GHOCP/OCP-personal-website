@@ -2,7 +2,7 @@
 
 export default function Home() {
   return (
-    <main className="fixed inset-0 overflow-hidden bg-black responsive-padding-1">
+    <main className="bg-black responsive-padding-1">
       <section className="relative grid-system">
         {/* Title */}
         <header className="mb-6 text-white">

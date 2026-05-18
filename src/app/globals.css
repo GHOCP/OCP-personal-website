@@ -1,12 +1,30 @@
 @import "tailwindcss";
 
 /*
-sm:   <640px default  | 2cols
-md:   768px+          | 6cols  
-lg:   1024px+         | 8cols
-xl:   1280px+         | 8cols
-2xl:  1536px+         | 8cols
+sm:   <640px default  | 2cols   | 2     8     4     12
+md:   768px+          | 6cols   | 1.5   3     4.5   6
+lg:   1024px+         | 8cols   | 2     4     6     8
+xl:   1280px+         | 8cols   | 5     7.5   10    25
+2xl:  1536px+         | 8cols   | 
+3xl:  2560px+         | 16cols  | 10    15    20    80
 */
+html,
+body {
+  overscroll-behavior: none;
+}
+
+@theme {
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* custom large screens */
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
 
 :root {
   /* Background Colors */
@@ -17,11 +35,11 @@ xl:   1280px+         | 8cols
   --background-grey-1: #A9A9A9;
 
   /* Default (Mobile, <640px) padding */
-  --page-pl: 3rem;
+  --page-pl: 2rem;
   /* pl-4 */
   --page-pt: 8rem;
   /* pt-6 */
-  --page-pr: 3.5rem;
+  --page-pr: 4rem;
   /* pr-6 */
   --page-pb: 12rem;
   /* pb-16 */
@@ -81,7 +99,7 @@ xl:   1280px+         | 8cols
   }
 }
 
-/* Desktop, 2xl (1536px+) */
+/* Desktop, 3xl (2560px+) */
 @media (min-width: 2560px) {
   :root {
     --page-pl: 10rem;
@@ -107,6 +125,10 @@ xl:   1280px+         | 8cols
   padding-top: var(--page-pt);
   padding-right: var(--page-pr);
   padding-bottom: var(--page-pb);
+}
+
+.nav-top {
+  padding-top: var(--page-pt);
 }
 
 /* Global responsive asymmetric padding */
@@ -170,6 +192,11 @@ body {
   .page-date-size {
     font-size: 10px;
     line-height: 15px;
+  }
+
+  .page-nav-size {
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 

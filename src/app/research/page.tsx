@@ -2,8 +2,8 @@ import ResearchItem from "@/components/ResearchItem";
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen responsive-padding-1 bg-(--background-research) relative">
-      <div className="fixed left-2 top-2 w-40 h-40 overflow-hidden pointer-events-none group z-99">
+    <main className="min-h-screen relative responsive-padding-1 bg-(--background-research) ">
+      <div className="fixed left-2 top-2 w-40 h-40 group z-99">
         <svg
           className="w-full h-auto max-w-lg absolute bottom-0
               transition-all duration-500 ease-out
@@ -21,7 +21,7 @@ export default function ResearchPage() {
         </svg>
       </div>
 
-      <section className="grid-system">
+      <section className="grid-system relative">
         <ResearchItem
           title="In id turpis urna. Pellentesque sodales turpis"
           date="2026-04-20"
@@ -36,6 +36,21 @@ export default function ResearchPage() {
           number={2}
         />
       </section>
+      <nav
+        className="fixed top-0 nav-top text-white page-nav-size
+        left-[calc(100vw-4rem+2px)]
+        md:left-[calc(100vw-4.5rem+2px)]
+        lg:left-[calc(100vw-6rem+2px)]
+        xl:left-[calc(100vw-10rem+2px)]
+        3xl:left-[calc(100vw-20rem+2px)]
+        4xl:text-[28px] 4xl:leading-[40px]
+        grid gap-x-6 gap-y-[30px] auto-rows-[130px]
+        "
+      >
+        <p className="row-span-1">Homepage</p>
+        <p className="row-span-2">Nav</p>
+        <p className="row-span-1">To the top</p>
+      </nav>
     </main>
   );
 }
