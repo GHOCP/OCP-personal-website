@@ -1,8 +1,9 @@
+import Link from "next/link";
 import ResearchItem from "@/components/ResearchItem";
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen relative responsive-padding-1 bg-(--background-research) ">
+    <main id="top" className="min-h-screen relative responsive-padding-1 bg-(--background-research) scroll-smooth">
       <div className="fixed left-2 top-2 w-40 h-40 group z-99">
         <svg
           className="w-full h-auto max-w-lg absolute bottom-0
@@ -15,7 +16,7 @@ export default function ResearchPage() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M0 0C19.2797 0 34.9091 15.6293 34.9091 34.9091C34.9091 51.5216 23.3022 65.4107 7.75758 68.9394V128H0V62.0606C14.9954 62.0606 27.1515 49.9045 27.1515 34.9091C27.1515 19.9137 14.9954 7.75758 0 7.75758V0ZM46.5455 46.5455C91.5316 46.5455 128 83.0138 128 128H120.242C120.242 87.2983 87.2471 54.303 46.5455 54.303V46.5455Z"
+            d="M68 54.3438L117.172 5.17187L122.828 10.8282L73.6562 60H128V68H68V128H60V73.6562L10.8282 122.828L5.17187 117.172L54.3438 68H0V60H60V0H68V54.3438Z"
             fill="white"
           />
         </svg>
@@ -47,9 +48,13 @@ export default function ResearchPage() {
         grid gap-x-6 gap-y-[30px] auto-rows-[130px]
         "
       >
-        <p className="row-span-1">Homepage</p>
-        <p className="row-span-2">Nav</p>
-        <p className="row-span-1">To the top</p>
+        <Link href="/" className="row-span-1">
+          Homepage
+        </Link>
+        <p className="row-span-2">&nbsp;</p>
+        <a href="#top" className="row-span-1">
+          To the top
+        </a>
       </nav>
     </main>
   );
