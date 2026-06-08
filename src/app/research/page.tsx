@@ -1,9 +1,14 @@
 import Link from "next/link";
 import ResearchItem from "@/components/ResearchItem";
+import { getResearchArticles } from "@/lib/reader";
 
 export default function ResearchPage() {
+  const articles = getResearchArticles();
   return (
-    <main id="top" className="min-h-screen relative responsive-padding-1 bg-(--background-research) scroll-smooth">
+    <main
+      id="top"
+      className="min-h-screen relative responsive-padding-1 bg-(--background-research) scroll-smooth"
+    >
       <div className="fixed left-2 top-2 w-40 h-40 group z-99">
         <svg
           className="w-full h-auto max-w-lg absolute bottom-0
@@ -23,7 +28,7 @@ export default function ResearchPage() {
       </div>
 
       <section className="grid-system relative">
-        <ResearchItem
+        {/* <ResearchItem
           title="In id turpis urna. Pellentesque sodales turpis"
           date="2026-04-20"
           image="/images/placeholderPic.png"
@@ -35,7 +40,16 @@ export default function ResearchPage() {
           date="2026-04-10"
           image="/images/placeholderPic.png"
           number={2}
-        />
+        /> */}
+        {articles.map((article) => (
+          <ResearchItem
+            key={article.slug}
+            title={article.title}
+            date={article.date}
+            image={article.cover}
+            number={article.number}
+          />
+        ))}
       </section>
       <nav
         className="fixed top-0 nav-top text-white page-nav-size
