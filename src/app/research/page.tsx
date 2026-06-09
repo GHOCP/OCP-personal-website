@@ -28,26 +28,13 @@ export default function ResearchPage() {
       </div>
 
       <section className="grid-system relative">
-        {/* <ResearchItem
-          title="In id turpis urna. Pellentesque sodales turpis"
-          date="2026-04-20"
-          image="/images/placeholderPic.png"
-          number={1}
-        />
-
-        <ResearchItem
-          title="Energy Consumption Behavior"
-          date="2026-04-10"
-          image="/images/placeholderPic.png"
-          number={2}
-        /> */}
         {articles.map((article) => (
           <ResearchItem
             key={article.slug}
+            slug={article.slug}
             title={article.title}
             date={article.date}
             image={article.cover}
-            number={article.number}
           />
         ))}
       </section>

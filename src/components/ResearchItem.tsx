@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 type Props = {
+  slug: string;
   title: string;
   date: string;
   image: string;
-  number: number;
 };
 
-export default function ResearchItem({ title, date, image, number }: Props) {
+export default function ResearchItem({ slug, title, date, image }: Props) {
   return (
-    <div
+    <Link
+      href={`/research/${slug}`}
       className="
       col-span-2 col-start-1 row-span-4
       md:col-span-4 md:col-start-2 md:row-span-3 
@@ -37,6 +40,6 @@ export default function ResearchItem({ title, date, image, number }: Props) {
           {title}
         </h2>
       </div>
-    </div>
+    </Link>
   );
 }
