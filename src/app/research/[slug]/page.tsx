@@ -1,12 +1,7 @@
+import { notFound } from "next/navigation";
+import { researchImports } from "@/lib/research-imports";
 import { getResearchArticle } from "@/lib/reader";
-
-type ResearchArticle = {
-  frontmatter: {
-    title: string;
-    date: string;
-  };
-  content: string;
-};
+import ResearchArticleContent from "@/components/ResearchArticleContent";
 
 export default async function ArticlePage({
   params,
@@ -15,13 +10,19 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
 
-  const article = getResearchArticle(slug) as ResearchArticle;
+  const importer = researchImports[slug as keyof typeof researchImports];
+
+  if (!importer) {
+    notFound();
+  }
+
+  const article = getResearchArticle(slug);
 
   return (
     <main>
       <h1>{article.frontmatter.title}</h1>
 
-      <pre>{article.content}</pre>
+      <ResearchArticleContent slug={slug} />
     </main>
   );
 }

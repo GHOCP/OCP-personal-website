@@ -34,7 +34,7 @@ export default function ResearchPage() {
             slug={article.slug}
             title={article.title}
             date={article.date}
-            image={article.cover}
+            image={article.cover ?? ""}
           />
         ))}
       </section>
