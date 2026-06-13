@@ -29,23 +29,24 @@ function normalizeDate(date: FrontmatterDate) {
 export function getResearchArticles() {
   const filenames = fs.readdirSync(articlesDirectory);
 
-  return filenames.map((filename) => {
+  const articles = filenames.map((filename) => {
     const filePath = path.join(articlesDirectory, filename);
 
     const fileContent = fs.readFileSync(filePath, "utf8");
 
-    const { data } = matter(fileContent) as unknown as {
-      data: { title: string; date?: string | Date; cover?: string; number?: number };
-    };
+    const { data } = matter(fileContent);
 
     return {
       slug: filename.replace(".mdx", ""),
       title: data.title,
-      date: normalizeDate(data.date),
+      date: data.date,
       cover: data.cover,
-      number: data.number,
     };
   });
+
+  return articles.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }
 
 export function getResearchArticle(slug: string): ResearchArticle {
@@ -63,7 +64,6 @@ export function getResearchArticle(slug: string): ResearchArticle {
       title: data.title,
       date: normalizeDate(data.date),
       cover: data.cover,
-      number: data.number,
     },
     content,
   };

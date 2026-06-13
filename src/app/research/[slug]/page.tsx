@@ -1,5 +1,3 @@
-import { notFound } from "next/navigation";
-import { researchImports } from "@/lib/research-imports";
 import { getResearchArticle } from "@/lib/reader";
 
 export default async function ArticlePage({
@@ -8,13 +6,6 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
-  const importer = researchImports[slug as keyof typeof researchImports];
-
-  if (!importer) {
-    notFound();
-  }
-
   const article = getResearchArticle(slug);
 
   return (
