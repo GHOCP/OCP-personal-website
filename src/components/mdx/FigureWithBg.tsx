@@ -4,14 +4,15 @@ type FigureProps = {
   src: string;
   alt?: string;
   caption?: string;
+  bgcolor: string;
 };
 
-export default function FigureWithBg({ src, alt = "", caption }: FigureProps) {
+export default function FigureWithBg({ src, alt = "", caption, bgcolor }: FigureProps) {
   return (
     <figure
       className="
-      lg:col-span-6 lg:row-span-3 lg:col-start-2 
-      bg-(--background-grey-pic) relative"
+      lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
+      style={{ backgroundColor: bgcolor }}
     >
       <Image
         src={src}

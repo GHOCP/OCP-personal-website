@@ -1,5 +1,8 @@
 import FigureWithBg from "./mdx/FigureWithBg";
 import MainTitle from "./mdx/MainTitle";
+import SemiTitle from "./mdx/SemiTitle";
+import Divider from "./mdx/Divider";
+import TextTwoCol from "./mdx/TextTwoCol";
 
 export const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -27,7 +30,9 @@ export const mdxComponents = {
     <p className="text-lg leading-8 mb-6" {...props} />
   ),
 
+  Divider,
   MainTitle,
   FigureWithBg,
-
+  SemiTitle,
+  TextTwoCol,
 };

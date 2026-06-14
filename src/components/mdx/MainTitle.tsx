@@ -17,7 +17,7 @@ export default function MainTitle({ title, date }: MainTitleProps) {
         "
     >
       <h1 className="lg:text-[64px] lg:leading-[80px] 3xl:text-[80px] 3xl:leading-[100px]">
-        {title}c
+        {title}
       </h1>
       <div className="text-[14px] leading-[20px] absolute left-0 bottom-[-40px] transform -translate-y-full">
         {date}
