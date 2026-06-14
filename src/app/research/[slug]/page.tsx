@@ -1,30 +1,22 @@
-import { getResearchArticle, getResearchSlugs } from "@/lib/reader";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx-components";
-
-export const dynamicParams = false;
-
-export async function generateStaticParams() {
-  return getResearchSlugs().map((slug) => ({ slug }));
-}
+import { getResearchArticle } from "@/lib/reader";
 
 export default async function ArticlePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
+
   const article = getResearchArticle(slug);
 
-  const ArticleContent = (
-    await import(`@/content/research/${slug}.mdx`)
-  ).default;
-
   return (
-    <main className="min-h-screen responsive-padding-1">
-      <h1>{article.frontmatter.title}</h1>
-      <article className="prose">
-        <ArticleContent components={mdxComponents} />
-      </article>
+    <main className="min-h-screen relative responsive-padding-1 bg-(--background-article) scroll-smooth">
+      {/* <h1>{article.frontmatter.title}</h1> */}
+      <section className="grid-system relative">
+        <MDXRemote source={article.content} components={mdxComponents} />
+      </section>
     </main>
   );
 }

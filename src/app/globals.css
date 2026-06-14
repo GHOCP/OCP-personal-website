@@ -27,12 +27,15 @@ body {
 }
 
 :root {
-  /* Background Colors */
+  /* Colors */
   --background-design: #3B875C;
   --background-research: #812418;
   --background-writing: #2C3559;
   --background-photos: #B79A1A;
   --background-grey-1: #A9A9A9;
+  --background-article: #FFFFFF;
+  --background-grey-pic: #F0F0F0;
+  --text-caption-color: #C0C0C0;
 
   /* Default (Mobile, <640px) padding */
   --page-pl: 2rem;
@@ -178,12 +181,12 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 
 /* ------------------------- */
-@layer components {
+@layer utilities {
   .page-semi-title-size {
     font-size: 30px;
     line-height: 40px;
