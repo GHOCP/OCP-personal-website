@@ -3,6 +3,8 @@ import MainTitle from "./mdx/MainTitle";
 import SemiTitle from "./mdx/SemiTitle";
 import Divider from "./mdx/Divider";
 import TextTwoCol from "./mdx/TextTwoCol";
+import Rtags from "./mdx/Rtags";
+import TitleAndText from "./mdx/TitleAndText";
 
 export const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -22,17 +24,11 @@ export const mdxComponents = {
     />
   ),
 
-  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className="text-3xl font-medium mt-12 mb-6" {...props} />
-  ),
-
-  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="text-lg leading-8 mb-6" {...props} />
-  ),
-
   Divider,
   MainTitle,
   FigureWithBg,
   SemiTitle,
   TextTwoCol,
+  Rtags,
+  TitleAndText,
 };

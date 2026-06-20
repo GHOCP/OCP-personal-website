@@ -11,6 +11,9 @@ export default async function ArticlePage({
 
   const article = getResearchArticle(slug);
 
+
+console.log(article.content);
+
   return (
     <main className="min-h-screen relative responsive-padding-1 bg-(--background-article) scroll-smooth">
       {/* <h1>{article.frontmatter.title}</h1> */}

@@ -12,7 +12,10 @@ export default function TextTwoCol({ content }: TextTwoColProps) {
         lg:col-span-6 lg:col-start-2 lg:row-span-2
         3xl:col-span-8 4xl:col-start-3 4xl:row-span-5"
     >
-      <p className="columns-2 text-[14px] leading-[20px]">{content}</p>
+      <p
+        className="columns-2 text-[14px] leading-[20px] whitespace-pre-wrap"
+        dangerouslySetInnerHTML={{ __html: content.replace(/\r?\n/g, "<br/>") }}
+      />
     </div>
   );
 }
