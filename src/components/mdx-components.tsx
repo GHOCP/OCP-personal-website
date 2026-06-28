@@ -2,9 +2,11 @@ import FigureWithBg from "./mdx/FigureWithBg";
 import MainTitle from "./mdx/MainTitle";
 import SemiTitle from "./mdx/SemiTitle";
 import Divider from "./mdx/Divider";
-import TextTwoCol from "./mdx/TextTwoCol";
+import TextTwoColTwoRows from "./mdx/TextTwoColTwoRows";
+import TextTwoColOneRow from "./mdx/TextTwoColOneRow";
 import Rtags from "./mdx/Rtags";
 import TitleAndText from "./mdx/TitleAndText";
+import FigureWithBgThreeCols from "./mdx/FigureWithBgThreeCols";
 
 export const mdxComponents = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -27,8 +29,10 @@ export const mdxComponents = {
   Divider,
   MainTitle,
   FigureWithBg,
+  FigureWithBgThreeCols,
   SemiTitle,
-  TextTwoCol,
+  TextTwoColTwoRows,
+  TextTwoColOneRow,
   Rtags,
   TitleAndText,
 };
