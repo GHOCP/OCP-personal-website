@@ -34,7 +34,7 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
                 alt={altArray[index] || ""}
                 width={800}
                 height={600}
-                className="w-4/5 mx-auto object-contain block"
+                className="w-9/10 mx-auto object-contain block"
               />
             </div>
 

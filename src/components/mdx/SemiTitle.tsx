@@ -13,7 +13,22 @@ export default function SemiTitle({ title }: SemiTitleProps) {
         3xl:col-span-8 4xl:col-start-3 4xl:row-span-5
         "
     >
-      <h2 className="lg:text-[35px] lg:leading-[40px] 3xl:text-[80px] 3xl:leading-[100px] border-r-12">
+      <h2
+        className="
+          lg:text-[35px] lg:leading-[40px] 
+          3xl:text-[80px] 3xl:leading-[100px] 
+          relative
+          before:absolute
+          before:right-0
+          before:top-[20%]
+          before:h-[12px]
+          before:w-[19.42px]
+        before:bg-black
+          before:content-['']
+
+          before:animate-[blink_1s_steps(1)_infinite]
+        "
+      >
         {title}
       </h2>
     </div>
