@@ -26,7 +26,7 @@ export default function SemiTitle({ title }: SemiTitleProps) {
         before:bg-black
           before:content-['']
 
-          before:animate-[blink_1s_steps(1)_infinite]
+          
         "
       >
         {title}
@@ -34,3 +34,5 @@ export default function SemiTitle({ title }: SemiTitleProps) {
     </div>
   );
 }
+
+// before:animate-[blink_1s_steps(1)_infinite]
