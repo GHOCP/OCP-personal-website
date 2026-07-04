@@ -25,8 +25,6 @@ export default function SemiTitle({ title }: SemiTitleProps) {
           before:w-[19.42px]
         before:bg-black
           before:content-['']
-
-          
         "
       >
         {title}

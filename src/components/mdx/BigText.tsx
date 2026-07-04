@@ -13,7 +13,7 @@ export default function BigText({ children }: BigTextProps) {
       className="
         col-span-6 row-span-4
         md:col-span-4 md:col-start-2 md:row-span-3
-        lg:col-span-6 lg:col-start-2 lg:row-span-1
+        lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-8 4xl:col-start-3 4xl:row-span-5
 
         lg:text-[64px] lg:leading-[80px]
@@ -21,7 +21,7 @@ export default function BigText({ children }: BigTextProps) {
       "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: false, amount: 1 }}
+      viewport={{ once: false, amount: 0.8 }}
       // transition={{ duration: 2, ease: "easeIn" }}
       transition={{
         type: "spring",

@@ -17,15 +17,15 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
         col-span-1 row-span-1
         md:col-span-4 md:col-start-2 md:row-span-3 
 
-        lg:col-span-6 lg:col-start-2 lg:row-span-2
+        lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-1 4xl:col-start-3 4xl:row-span-5
         grid 
-        lg:grid-cols-3 lg:gap-x-[24px]"
+        lg:grid-cols-2 lg:gap-x-[24px]"
     >
       {srcArray.map((src, index) => (
         <li key={src} className="">
           <figure
-            className="relative h-full flex items-center justify-center"
+            className="relative col-span-1 h-full flex items-center justify-center"
             style={{ backgroundColor: bgcolor }}
           >
             <div className="grid place-items-center">
@@ -34,7 +34,7 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
                 alt={altArray[index] || ""}
                 width={800}
                 height={600}
-                className="w-9/10 mx-auto object-contain block"
+                className="w-4/5 mx-auto object-contain block"
               />
             </div>
 

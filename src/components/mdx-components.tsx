@@ -8,16 +8,22 @@ import Rtags from "./mdx/Rtags";
 import TitleAndText from "./mdx/TitleAndText";
 import FigureWithBgThreeCols from "./mdx/FigureWithBgThreeCols";
 import BigText from "./mdx/BigText";
+import FigureWithBgTwoCols from "./mdx/FigureWithBgTwoCols";
+import TextTwoColSepaOneRow from "./mdx/TextTwoColSepaOneRow";
+import TextTwoColSepaTwoRows from "./mdx/TextTwoColSepaTwoRows";
 
 export const mdxComponents = {
   Divider,
   MainTitle,
   FigureWithBg,
   FigureWithBgThreeCols,
+  FigureWithBgTwoCols,
   SemiTitle,
   TextTwoColTwoRows,
+  TextTwoColSepaOneRow,
+  TextTwoColSepaTwoRows,
   TextTwoColOneRow,
   Rtags,
   TitleAndText,
-  BigText
+  BigText,
 };

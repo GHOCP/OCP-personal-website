@@ -1,11 +1,11 @@
 type RtagsProps = {
   researchMethods: string;
-  // intro: string;
+  intro: string;
   contributorMe: string;
   contributorOthers: string;
 };
 
-export default function Rtags({ researchMethods, contributorMe, contributorOthers }: RtagsProps) {
+export default function Rtags({ researchMethods, intro, contributorMe, contributorOthers }: RtagsProps) {
   return (
     <ul
       className=" 
@@ -21,10 +21,10 @@ export default function Rtags({ researchMethods, contributorMe, contributorOther
         className="lg:text-[10px] lg:leading-[15px] 3xl:text-[80px] 3xl:leading-[100px] col-span-1 row-span-1 bg-black text-white"
         dangerouslySetInnerHTML={{ __html: researchMethods }}
       />
-      {/* <p 
+      <p 
         className="lg:text-[10px] lg:leading-[15px] 3xl:text-[80px] 3xl:leading-[100px] col-span-1 row-span-1"
         dangerouslySetInnerHTML={{ __html: intro }}
-      /> */}
+      />
       <li 
         className="lg:text-[10px] lg:leading-[15px] 3xl:text-[80px] 3xl:leading-[100px] col-span-1 row-span-1"
         dangerouslySetInnerHTML={{ __html: contributorMe }}
