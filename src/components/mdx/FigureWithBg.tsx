@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LightboxImage from "./LightboxImage";
 
 type FigureProps = {
   src: string;
@@ -14,12 +14,10 @@ export default function FigureWithBg({ src, alt = "", caption, bgcolor }: Figure
       lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
       style={{ backgroundColor: bgcolor }}
     >
-      <div className="grid place-items-center h-100">
-        <Image
+      <div className="flex items-center justify-center h-full w-full overflow-hidden">
+        <LightboxImage
           src={src}
           alt={alt}
-          width={800}
-          height={600}
           className="w-4/5 mx-auto object-contain block"
         />
       </div>
@@ -32,3 +30,4 @@ export default function FigureWithBg({ src, alt = "", caption, bgcolor }: Figure
     </figure>
   );
 }
+

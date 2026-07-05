@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LightboxImage from "./LightboxImage";
 
 type FigureProps = {
   srcs: string;
@@ -29,11 +29,9 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
             style={{ backgroundColor: bgcolor }}
           >
             <div className="grid place-items-center">
-              <Image
+              <LightboxImage
                 src={src}
                 alt={altArray[index] || ""}
-                width={800}
-                height={600}
                 className="w-9/10 mx-auto object-contain block"
               />
             </div>

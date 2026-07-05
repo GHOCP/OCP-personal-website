@@ -11,11 +11,13 @@ import BigText from "./mdx/BigText";
 import FigureWithBgTwoCols from "./mdx/FigureWithBgTwoCols";
 import TextTwoColSepaOneRow from "./mdx/TextTwoColSepaOneRow";
 import TextTwoColSepaTwoRows from "./mdx/TextTwoColSepaTwoRows";
+import FigureWithBgCarousel from "./mdx/FigureWithBgCarousel";
 
 export const mdxComponents = {
   Divider,
   MainTitle,
   FigureWithBg,
+  FigureWithBgCarousel,
   FigureWithBgThreeCols,
   FigureWithBgTwoCols,
   SemiTitle,
