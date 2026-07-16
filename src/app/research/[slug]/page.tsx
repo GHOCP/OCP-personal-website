@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx-components";
-import { getResearchArticle } from "@/lib/reader";
+import { getResearchArticle, getResearchSections } from "@/lib/reader";
+import TOC from "@/components/TOC";
 
 export default async function ArticlePage({
   params,
@@ -10,13 +11,29 @@ export default async function ArticlePage({
   const { slug } = await params;
 
   const article = getResearchArticle(slug);
+  const sections = getResearchSections(article.content);
 
   return (
-    <main className="min-h-screen relative responsive-padding-1 bg-(--background-article) scroll-smooth">
-      {/* <h1>{article.frontmatter.title}</h1> */}
+    <main
+      id="top"
+      className="min-h-screen relative responsive-padding-1 bg-(--background-article) scroll-smooth"
+    >
       <section className="grid-system relative">
         <MDXRemote source={article.content} components={mdxComponents} />
       </section>
+      <div
+        className="fixed top-0 nav-top text-black page-nav-size
+        left-[calc(100vw-4rem+2px)]
+        md:left-[calc(100vw-4.5rem+2px)]
+        lg:left-[calc(100vw-6rem+2px)]
+        xl:left-[calc(100vw-10rem+2px)]
+        3xl:left-[calc(100vw-20rem+2px)]
+        4xl:text-[28px] 4xl:leading-[40px]
+        grid gap-x-6 gap-y-[30px] auto-rows-[130px]
+        "
+      >
+        <TOC />
+      </div>
     </main>
   );
 }

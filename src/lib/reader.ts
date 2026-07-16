@@ -74,3 +74,26 @@ export function getResearchSlugs() {
 
   return filenames.map((filename) => filename.replace(".mdx", ""));
 }
+
+export function slugifySectionTitle(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/&ldquo;|&rdquo;|&quot;|&amp;/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function getResearchSections(content: string) {
+  const sectionPattern = /<SemiTitle[^>]*title="([^"]+)"/g;
+  const sections: { id: string; label: string }[] = [];
+
+  for (const match of content.matchAll(sectionPattern)) {
+    const label = match[1];
+    sections.push({
+      id: slugifySectionTitle(label),
+      label,
+    });
+  }
+
+  return sections;
+}

@@ -14,7 +14,7 @@ export default function FigureWithBg({ src, alt = "", caption, bgcolor }: Figure
       lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
       style={{ backgroundColor: bgcolor }}
     >
-      <div className="flex items-center justify-center h-full w-full overflow-hidden">
+      <div className="grid place-items-center h-100">
         <LightboxImage
           src={src}
           alt={alt}
@@ -30,4 +30,3 @@ export default function FigureWithBg({ src, alt = "", caption, bgcolor }: Figure
     </figure>
   );
 }
-

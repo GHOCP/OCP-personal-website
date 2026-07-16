@@ -1,11 +1,15 @@
+
 type SemiTitleProps = {
   title: string;
+  toc?: string;
 };
 
-export default function SemiTitle({ title }: SemiTitleProps) {
+export default function SemiTitle({ title, toc }: SemiTitleProps) {
+  const id = toc?.toLowerCase().replace(/\s+/g, "-");
+
   return (
     <div
-      className=" 
+      className="scroll-mt-8
         col-span-2 row-span-4
         md:col-span-4 md:col-start-2 md:row-span-3 
 
@@ -14,6 +18,8 @@ export default function SemiTitle({ title }: SemiTitleProps) {
         "
     >
       <h2
+        id={id}
+        data-toc={toc}
         className="
           lg:text-[35px] lg:leading-[40px] 
           3xl:text-[80px] 3xl:leading-[100px] 
@@ -32,5 +38,3 @@ export default function SemiTitle({ title }: SemiTitleProps) {
     </div>
   );
 }
-
-// before:animate-[blink_1s_steps(1)_infinite]

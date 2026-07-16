@@ -11,6 +11,7 @@ xl:   1280px+         | 8cols   | 5     7.5   10    25
 html,
 body {
   overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
 @theme {
