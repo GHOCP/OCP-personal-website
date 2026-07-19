@@ -75,7 +75,7 @@ export default function Home() {
             priority
           /> */}
           <svg
-            className="w-full h-auto max-w-lg absolute bottom-0
+            className="w-99/100 h-99/100 object-contain
               transition-all duration-500 ease-out
               group-hover:scale-105
               group-hover:-translate-y-2
@@ -111,7 +111,7 @@ export default function Home() {
             priority
           /> */}
           <svg
-            className="w-full h-auto max-w-lg absolute bottom-0
+            className="w-99/100 h-99/100 object-contain
               transition-all duration-500 ease-out
               group-hover:scale-105
               group-hover:-translate-y-2
@@ -147,7 +147,7 @@ export default function Home() {
             priority
           /> */}
           <svg
-            className="w-full h-auto max-w-lg absolute bottom-0
+            className="w-99/100 h-99/100 object-contain
               transition-all duration-500 ease-out
               group-hover:scale-105
               group-hover:-translate-y-2
@@ -183,7 +183,7 @@ export default function Home() {
             priority
           /> */}
           <svg
-            className="w-full h-auto max-w-lg absolute bottom-0
+            className="w-99/100 h-99/100 object-contains
               transition-all duration-500 ease-out
               group-hover:scale-105
               group-hover:-translate-y-2

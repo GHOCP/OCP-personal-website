@@ -42,7 +42,7 @@ export default function LightboxImage({
     open &&
     createPortal(
       <div
-        className="fixed inset-0 z-9999 flex items-center justify-center bg-black/85 p-8"
+        className="fixed inset-0 z-9999 flex items-center justify-center bg-white/85 p-8"
         onClick={close}
         role="dialog"
         aria-modal="true"
@@ -51,7 +51,7 @@ export default function LightboxImage({
         <button
           type="button"
           onClick={close}
-          className="absolute top-4 right-4 cursor-pointer border-0 bg-transparent text-3xl leading-none text-white"
+          className="absolute top-16 right-16 cursor-pointer border-0 bg-transparent text-4xl leading-none text-black"
           aria-label="Close"
         >
           ×

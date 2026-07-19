@@ -1,8 +1,8 @@
-type TextTwoColTwoRowsProps = {
+type TextTwoColsTwoRowsProps = {
   content: string;
 };
 
-export default function TextTwoColTwoRows({ content }: TextTwoColTwoRowsProps) {
+export default function TextTwoColsTwoRows({ content }: TextTwoColsTwoRowsProps) {
   return (
     <div
       className=" 

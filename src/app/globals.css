@@ -189,7 +189,7 @@ body {
 /* ------------------------- */
 @layer utilities {
   .page-semi-title-size {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 40px;
   }
 

@@ -25,13 +25,6 @@ export default function SemiTitle({ title, toc }: SemiTitleProps) {
           3xl:text-[80px] 3xl:leading-[100px] 
           relative
           scroll-mt-[5vh]
-          before:absolute
-          before:right-0
-          before:top-[20%]
-          before:h-[12px]
-          before:w-[19.42px]
-        before:bg-black
-          before:content-['']
         "
       >
         {title}
@@ -39,3 +32,11 @@ export default function SemiTitle({ title, toc }: SemiTitleProps) {
     </div>
   );
 }
+
+// before:absolute
+// before:left-[-64px]
+// before:top-[20%]
+// before:h-[12px]
+// before:w-[19.42px]
+// before:bg-black
+// before:content-['']

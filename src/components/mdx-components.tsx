@@ -2,16 +2,23 @@ import FigureWithBg from "./mdx/FigureWithBg";
 import MainTitle from "./mdx/MainTitle";
 import SemiTitle from "./mdx/SemiTitle";
 import Divider from "./mdx/Divider";
-import TextTwoColTwoRows from "./mdx/TextTwoColTwoRows";
-import TextTwoColOneRow from "./mdx/TextTwoColOneRow";
+import TextTwoColsTwoRows from "./mdx/TextTwoColsTwoRows";
+import TextTwoColsOneRow from "./mdx/TextTwoColsOneRow";
 import Rtags from "./mdx/Rtags";
 import TitleAndText from "./mdx/TitleAndText";
 import FigureWithBgThreeCols from "./mdx/FigureWithBgThreeCols";
 import BigText from "./mdx/BigText";
 import FigureWithBgTwoCols from "./mdx/FigureWithBgTwoCols";
-import TextTwoColSepaOneRow from "./mdx/TextTwoColSepaOneRow";
-import TextTwoColSepaTwoRows from "./mdx/TextTwoColSepaTwoRows";
+import TextTwoColsSepaOneRow from "./mdx/TextTwoColsSepaOneRow";
+import TextTwoColsSepaTwoRows from "./mdx/TextTwoColsSepaTwoRows";
 import FigureWithBgCarousel from "./mdx/FigureWithBgCarousel";
+import FigureWithBgOnePlusTwo from "./mdx/FigureWithBgOnePlusTwo"
+import FigureWithBgFourCols from "./mdx/FigureWithBgFourCols";
+import TextThreeColsSepaOneRow from "./mdx/TextThreeColsSepaOneRow";
+import TextThreeColsSepaTwoRows from "./mdx/TextThreeColsSepaTwoRows";
+import TextFourColsSepaOneRow from "./mdx/TextFourColsSepaOneRow";
+import TextFourColsSepaTwoRows from "./mdx/TextFourColsSepaTwoRows";
+
 
 export const mdxComponents = {
   Divider,
@@ -20,11 +27,17 @@ export const mdxComponents = {
   FigureWithBgCarousel,
   FigureWithBgThreeCols,
   FigureWithBgTwoCols,
+  FigureWithBgOnePlusTwo,
+  FigureWithBgFourCols,
   SemiTitle,
-  TextTwoColTwoRows,
-  TextTwoColSepaOneRow,
-  TextTwoColSepaTwoRows,
-  TextTwoColOneRow,
+  TextTwoColsTwoRows,
+  TextTwoColsSepaOneRow,
+  TextTwoColsSepaTwoRows,
+  TextThreeColsSepaOneRow,
+  TextThreeColsSepaTwoRows,
+  TextFourColsSepaOneRow,
+  TextFourColsSepaTwoRows,
+  TextTwoColsOneRow,
   Rtags,
   TitleAndText,
   BigText,
