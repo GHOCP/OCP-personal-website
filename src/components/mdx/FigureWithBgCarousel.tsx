@@ -117,7 +117,7 @@ export default function FigureWithBg({
 
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % srcArray.length);
-    }, 3000);
+    }, 1100);
 
     return () => clearInterval(timer);
   }, [srcArray.length]);

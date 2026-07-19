@@ -202,6 +202,11 @@ body {
     font-size: 12px;
     line-height: 20px;
   }
+
+  .semi-page-nav-size {
+    font-size: 12px;
+    line-height: 48px;
+  }
 }
 
 

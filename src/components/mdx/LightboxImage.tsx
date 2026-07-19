@@ -65,6 +65,7 @@ export default function LightboxImage({
             alt={alt}
             width={1600}
             height={1200}
+            preload
             className="max-h-[90vh] max-w-[90vw] h-auto w-auto object-contain"
           />
         </div>
@@ -85,6 +86,7 @@ export default function LightboxImage({
           alt={alt}
           width={width}
           height={height}
+          preload
           className={className}
         />
       </button>

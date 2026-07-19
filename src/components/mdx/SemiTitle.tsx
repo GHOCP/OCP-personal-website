@@ -24,6 +24,7 @@ export default function SemiTitle({ title, toc }: SemiTitleProps) {
           lg:text-[35px] lg:leading-[40px] 
           3xl:text-[80px] 3xl:leading-[100px] 
           relative
+          scroll-mt-[5vh]
           before:absolute
           before:right-0
           before:top-[20%]

@@ -2,9 +2,12 @@
 type MainTitleProps = {
   title: string;
   date: string;
+  toc?: string;
 };
 
-export default function MainTitle({ title, date }: MainTitleProps) {
+export default function MainTitle({ title, date, toc }: MainTitleProps) {
+  const id = toc?.toLowerCase().replace(/\s+/g, "-");
+
   return (
     <div
       className=" 
@@ -16,7 +19,11 @@ export default function MainTitle({ title, date }: MainTitleProps) {
         relative
         "
     >
-      <h1 className="lg:text-[64px] lg:leading-[80px] 3xl:text-[80px] 3xl:leading-[100px]">
+      <h1
+        className="lg:text-[64px] lg:leading-[80px] 3xl:text-[80px] 3xl:leading-[100px]"
+        id={id}
+        data-toc={toc}
+      >
         {title}
       </h1>
       <div className="text-[14px] leading-[20px] absolute left-0 bottom-[-40px] transform -translate-y-full">

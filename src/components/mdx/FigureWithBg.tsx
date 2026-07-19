@@ -7,14 +7,19 @@ type FigureProps = {
   bgcolor: string;
 };
 
-export default function FigureWithBg({ src, alt = "", caption, bgcolor }: FigureProps) {
+export default function FigureWithBg({
+  src,
+  alt = "",
+  caption,
+  bgcolor,
+}: FigureProps) {
   return (
     <figure
       className="
       lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
       style={{ backgroundColor: bgcolor }}
     >
-      <div className="grid place-items-center h-100">
+      <div className="grid place-items-center h-100 overflow-hidden">
         <LightboxImage
           src={src}
           alt={alt}
