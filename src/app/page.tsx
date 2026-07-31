@@ -1,5 +1,12 @@
 // import Image from "next/image";
 
+// col-span- row-span-
+// md:col-span- md:col-start- md:row-span-
+// lg:col-span- lg:col-start- lg:row-span-
+// xl:col-span- xl:col-start- xl:row-span-
+// 2xl:col-span- 2xl:col-start- 2xl:row-span-
+// 3xl:col-span- 4xl:col-start- 4xl:row-span-
+
 export default function Home() {
   return (
     <main className="bg-black responsive-padding-1">

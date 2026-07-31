@@ -18,7 +18,7 @@ import TextThreeColsSepaOneRow from "./mdx/TextThreeColsSepaOneRow";
 import TextThreeColsSepaTwoRows from "./mdx/TextThreeColsSepaTwoRows";
 import TextFourColsSepaOneRow from "./mdx/TextFourColsSepaOneRow";
 import TextFourColsSepaTwoRows from "./mdx/TextFourColsSepaTwoRows";
-
+import TextTwoColsNRows from "./mdx/TextTwoColsNRows";
 
 export const mdxComponents = {
   Divider,
@@ -38,6 +38,7 @@ export const mdxComponents = {
   TextFourColsSepaOneRow,
   TextFourColsSepaTwoRows,
   TextTwoColsOneRow,
+  TextTwoColsNRows,
   Rtags,
   TitleAndText,
   BigText,

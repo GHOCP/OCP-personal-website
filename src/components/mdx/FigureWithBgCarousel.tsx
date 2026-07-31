@@ -129,7 +129,13 @@ export default function FigureWithBg({
 
   return (
     <figure
-      className="lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
+      className="
+        sm:col-span-2 sm:row-span-3
+        md:col-span-4 md:col-start-2 md:row-span-3
+        lg:col-span-6 lg:col-start-2 lg:row-span-3
+        3xl:col-span-12 4xl:col-start-3 4xl:row-span-4
+        relative
+      "
       style={{ backgroundColor: bgcolor }}
     >
       <div className="flex items-center justify-center h-full w-full overflow-hidden">
