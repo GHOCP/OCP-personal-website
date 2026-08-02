@@ -11,7 +11,7 @@ export default function SemiTitle({ title, toc }: SemiTitleProps) {
     <div
       className="
         scroll-mt-8 col-span-2 row-span-1
-        md:col-span-4 md:col-start-2 md:row-span-3 
+        md:col-span-4 md:col-start-2 md:row-span-1
         lg:col-span-6 lg:col-start-2 lg:row-span-1 
         3xl:col-span-8 4xl:col-start-3 4xl:row-span-5
         "
@@ -20,12 +20,11 @@ export default function SemiTitle({ title, toc }: SemiTitleProps) {
         id={id}
         data-toc={toc}
         className="
-          font-medium text-[24px] leading-[32px]
+          font-medium text-[32px] leading-[40px]
+          md:text-[35px] leading-[40px]
           lg:text-[35px] lg:leading-[40px]
           3xl:text-[80px] 3xl:leading-[100px] 
-          relative
-          scroll-mt-[5vh]
-        "
+          relative scroll-mt-[5vh]"
       >
         {title}
       </h2>

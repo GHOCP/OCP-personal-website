@@ -22,7 +22,8 @@ export default async function ArticlePage({
 
         <div
           className="
-            hidden fixed page-nav-size 
+            hidden fixed page-nav-size
+            md:block md:col-start-6 md:col-span-1 md:row-start-1 md:row-span-10
             lg:block lg:col-start-8 lg:col-span-1 lg:row-start-1 lg:row-span-10"
         >
           <TOC />
