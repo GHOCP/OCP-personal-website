@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 type MainTitleProps = {
   title: string;
@@ -11,7 +12,7 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
   return (
     <div
       className=" 
-        sm:col-span-2 sm:row-span-2
+        col-span-2 row-span-2
         md:col-span-4 md:col-start-2 md:row-span-2
         lg:col-span-6 lg:col-start-2 lg:row-span-2
         3xl:col-span-12 4xl:col-start-3 4xl:row-span-3
@@ -20,9 +21,9 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
     >
       <h1
         className="
-          font-medium
-          sm:tex-[64px] sm:leading-[80px]
-          lg:text-[64px] lg:leading-[80px] 
+          text-[40px] leading-[48px] font-medium
+          md:text-[70px] lg:leading-[80px]
+          lg:text-[70px] lg:leading-[80px] 
           3xl:text-[80px] 3xl:leading-[100px]
         "
         id={id}
@@ -30,8 +31,19 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
       >
         {title}
       </h1>
-      <div className="
-        text-[14px] leading-[20px] 
+
+      <Link
+        href="/research"
+        className="
+          absolute top-[-40px] left-1
+          page-nav-size text-(--background-research)"
+      >
+        &lt;    - Back to Research -
+      </Link>
+
+      <div
+        className="
+        page-nav-size
         absolute left-0 bottom-[-40px] transform -translate-y-full"
       >
         {date}

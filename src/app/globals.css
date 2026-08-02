@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /*
 sm:   <640px default  | 2cols   | 2     8     4     12
 md:   768px+          | 6cols   | 1.5   3     4.5   6
@@ -43,7 +44,7 @@ body {
   /* pl-4 */
   --page-pt: 8rem;
   /* pt-6 */
-  --page-pr: 4rem;
+  --page-pr: 3rem;
   /* pr-6 */
   --page-pb: 12rem;
   /* pb-16 */
@@ -207,11 +208,6 @@ body {
   .page-nav-size {
     font-size: 12px;
     line-height: 20px;
-  }
-
-  .semi-page-nav-size {
-    font-size: 12px;
-    line-height: 48px;
   }
 }
 

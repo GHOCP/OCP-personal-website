@@ -1,31 +1,51 @@
 type TextTwoColsNRowsProps = {
   content: string;
-  row: 2 | 3 | 4 | 5;
+  row_default: string;
+  row_lg: string
 };
 
 export default function TextTwoColsNRows({
   content,
-  row,
+  row_default,
+  row_lg,
 }: TextTwoColsNRowsProps) {
-  const rowSpan = {
-    2: "lg:row-span-2",
-    3: "lg:row-span-3",
-    4: "lg:row-span-4",
-    5: "lg:row-span-5",
-  }[row];
+
+  const row_default_n = Number(row_default);
+  const row_lg_n = Number(row_lg);
+
+  const rowSpan_default = {
+    2: "row-span-2",
+    3: "row-span-3",
+    4: "row-span-4",
+    5: "row-span-5",
+    6: "row-span-6",
+    7: "row-span-7",
+    8: "row-span-8",
+    9: "row-span-9",
+    10: "row-span-10",
+  }[row_default_n];
+
+    const rowSpan_lg = {
+      2: "lg:row-span-2",
+      3: "lg:row-span-3",
+      4: "lg:row-span-4",
+      5: "lg:row-span-5",
+      6: "lg:row-span-6",
+      7: "lg:row-span-7",
+      8: "lg:row-span-8",
+      9: "lg:row-span-9",
+      10: "lg:row-span-10",
+    }[row_lg_n];
 
   return (
     <div
       className={`
-        col-span-2 row-span-10
-        md:col-span-4 md:col-start-2 md:row-span-3
-        lg:col-span-6 lg:col-start-2
-        ${rowSpan}
-        3xl:col-span-8 4xl:col-start-3 4xl:row-span-5
+        col-span-2 ${rowSpan_default}
+        lg:col-span-6 lg:col-start-2 ${rowSpan_lg}
       `}
     >
       <p
-        className="h-full columns-1 lg:columns-2 [column-fill:auto] whitespace-pre-wrap page-text"
+        className="h-full [column-fill:auto] columns-1 lg:columns-2 whitespace-pre-wrap page-text"
         dangerouslySetInnerHTML={{
           __html: content.replace(/\r?\n/g, "<br/>"),
         }}

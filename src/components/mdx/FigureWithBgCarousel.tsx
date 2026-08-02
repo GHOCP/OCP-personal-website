@@ -1,89 +1,3 @@
-// import LightboxImage from "./LightboxImage";
-
-// type FigureProps = {
-//   src: string;
-//   alt?: string;
-//   caption?: string;
-//   bgcolor: string;
-// };
-
-// export default function FigureWithBg({ src, alt = "", caption, bgcolor }: FigureProps) {
-//   return (
-//     <figure
-//       className="
-//       lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
-//       style={{ backgroundColor: bgcolor }}
-//     >
-//       <div className="flex items-center justify-center h-full w-full overflow-hidden">
-//         <LightboxImage
-//           src={src}
-//           alt={alt}
-//           className="w-4/5 mx-auto object-contain block"
-//         />
-//       </div>
-
-//       {caption && (
-//         <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
-//           {caption}
-//         </figcaption>
-//       )}
-//     </figure>
-//   );
-// }
-
-// "use client";
-
-// type FigureProps = {
-//   srcs: string;
-//   alt?: string;
-//   caption?: string;
-//   bgcolor: string;
-// };
-// import { useEffect, useState } from "react";
-// import LightboxImage from "./LightboxImage";
-
-// export default function FigureWithBg({
-//   srcs = "",
-//   alt = "",
-//   caption,
-//   bgcolor,
-// }: FigureProps) {
-//   const [index, setIndex] = useState(0);
-
-//     const srcArray = srcs.split("&&&").filter((s): s is string => !!s);
-
-//   useEffect(() => {
-//     if (srcArray.length <= 1) return;
-
-//     const timer = setInterval(() => {
-//       setIndex((i) => (i + 1) % srcArray.length);
-//     }, 3000); // change every 3 seconds
-
-//     return () => clearInterval(timer);
-//   }, [srcArray.length]);
-
-//   return (
-//     <figure
-//       className="lg:col-span-6 lg:row-span-3 lg:col-start-2 relative"
-//       style={{ backgroundColor: bgcolor }}
-//     >
-//       <div className="flex items-center justify-center h-full w-full overflow-hidden">
-//         <LightboxImage
-//           src={srcArray[index]}
-//           alt={alt || ""}
-//           className="w-4/5 mx-auto object-contain block"
-//         />
-//       </div>
-
-//       {caption && (
-//         <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
-//           {caption}
-//         </figcaption>
-//       )}
-//     </figure>
-//   );
-// }
-
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -130,7 +44,7 @@ export default function FigureWithBg({
   return (
     <figure
       className="
-        sm:col-span-2 sm:row-span-3
+        col-span-2 row-span-2
         md:col-span-4 md:col-start-2 md:row-span-3
         lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-12 4xl:col-start-3 4xl:row-span-4
@@ -149,7 +63,7 @@ export default function FigureWithBg({
       </div>
 
       {caption && (
-        <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
+        <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
           {caption}
         </figcaption>
       )}
