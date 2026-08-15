@@ -10,6 +10,7 @@ type LightboxImageProps = {
   className?: string;
   width?: number;
   height?: number;
+  bgcolor?: string;
 };
 
 export default function LightboxImage({
@@ -18,6 +19,7 @@ export default function LightboxImage({
   className,
   width = 800,
   height = 600,
+  bgcolor = "#F7F7F7",
 }: LightboxImageProps) {
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
@@ -42,7 +44,8 @@ export default function LightboxImage({
     open &&
     createPortal(
       <div
-        className="fixed inset-0 z-9999 flex items-center justify-center bg-white/85 p-8"
+        className="fixed inset-0 z-9999 flex items-center justify-center p-8"
+        style={{ backgroundColor: bgcolor, opacity: 0.95 }}
         onClick={close}
         role="dialog"
         aria-modal="true"

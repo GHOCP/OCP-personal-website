@@ -13,7 +13,7 @@ export default function TextTwoColsNRows({
 }: TextTwoColsNRowsProps) {
 
   const row_default_n = Number(row_default);
-  const row_md_n=Number(row_md);
+  const row_md_n = Number(row_md);
   const row_lg_n = Number(row_lg);
 
   const rowSpan_default = {
@@ -61,7 +61,7 @@ export default function TextTwoColsNRows({
       `}
     >
       <p
-        className="h-full [column-fill:auto] columns-1 lg:columns-2 whitespace-pre-wrap page-text"
+        className="h-full [column-fill:auto] lg:columns-2 whitespace-pre-wrap page-text"
         dangerouslySetInnerHTML={{
           __html: content.replace(/\r?\n/g, "<br/>"),
         }}

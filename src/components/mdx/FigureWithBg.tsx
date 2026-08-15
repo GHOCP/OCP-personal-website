@@ -16,23 +16,25 @@ export default function FigureWithBg({
   return (
     <figure
       className="
-        sm:col-span-2 sm:row-span-3
-        md:col-span-4 md:col-start-2 md:row-span-3
+        col-span-2 row-span-2
+        md:col-span-4 md:col-start-2 md:row-span-2
         lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-12 4xl:col-start-3 4xl:row-span-4
-        relative"
+        relative
+      "
       style={{ backgroundColor: bgcolor }}
     >
       <div className="grid place-items-center h-100 overflow-hidden">
         <LightboxImage
           src={src}
           alt={alt}
+          bgcolor={bgcolor}
           className="w-4/5 mx-auto object-contain block"
         />
       </div>
 
       {caption && (
-        <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
+        <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
           {caption}
         </figcaption>
       )}
