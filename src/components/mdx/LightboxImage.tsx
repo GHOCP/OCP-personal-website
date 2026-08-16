@@ -81,7 +81,7 @@ export default function LightboxImage({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="cursor-zoom-in border-0 bg-transparent p-0"
+        className="cursor-zoom-in border-0 bg-transparent p-0 w-full h-full flex items-center justify-center"
         aria-label={`View larger: ${alt || "image"}`}
       >
         <Image

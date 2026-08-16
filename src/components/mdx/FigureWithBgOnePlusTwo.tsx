@@ -19,50 +19,59 @@ export default function FigureWithBgOnePlusTwo({
   return (
     <div
       className="
+        col-span-2 row-span-3
         lg:col-span-6 lg:col-start-2 lg:row-span-4
-        grid 
-        lg:grid-cols-3 lg:gap-x-[24px]"
+        grid gap-x-[24px] gap-y-[30px]
+        lg:grid-cols-3"
     >
       {/* <pic1> */}
       <figure
         className="
-          relative h-full flex items-center justify-center 
-          lg:col-span-2"
+          col-span-2 row-span-2 
+          lg:col-span-2 lg:row-span-4
+          h-[290px] lg:h-[610px]
+          relative"
         style={{ backgroundColor: bgcolor }}
       >
-        <div className="grid place-items-center">
+        <div className="w-full h-full flex items-center justify-center">
           <LightboxImage
             src={srcArray[0]}
             alt={altArray[0] || ""}
-            className="w-9/10 mx-auto object-contain block"
+            className="max-w-[80%] max-h-[80%] w-auto h-auto object-contain"
           />
         </div>
 
         {captionArray[0] && (
-          <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
+          <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
             {captionArray[0]}
           </figcaption>
         )}
       </figure>
 
-      <div className="lg:col-span-1 grid gap-y-[30px] gap-x-[24px] auto-rows-[130px]">
+      <div
+        className="
+          col-span-2
+          lg:col-span-1 
+          grid grid-cols-2 gap-x-[24px] gap-y-[30px]"
+      >
         {/* <pic2> */}
         <figure
           className="
-          relative h-full flex items-center justify-center 
-          lg:row-span-2"
+            col-span-1 row-span-1
+            lg:col-span-1
+            h-[130px] relative"
           style={{ backgroundColor: bgcolor }}
         >
-          <div className="grid place-items-center">
+          <div className="w-full h-full flex items-center justify-center">
             <LightboxImage
               src={srcArray[1]}
               alt={altArray[1] || ""}
-              className="w-9/10 mx-auto object-contain block"
+              className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain"
             />
           </div>
 
           {captionArray[1] && (
-            <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
+            <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
               {captionArray[1]}
             </figcaption>
           )}
@@ -71,20 +80,21 @@ export default function FigureWithBgOnePlusTwo({
         {/* <pic3> */}
         <figure
           className="
-          relative h-full flex items-center justify-center 
-          lg:row-span-2"
+            col-span-1 row-span-1 
+            lg:col-span-1
+            h-[130px] relative"
           style={{ backgroundColor: bgcolor }}
         >
-          <div className="grid place-items-center">
+          <div className="w-full h-full flex items-center justify-center">
             <LightboxImage
               src={srcArray[2]}
               alt={altArray[2] || ""}
-              className="w-9/10 mx-auto object-contain block"
+              className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain"
             />
           </div>
 
           {captionArray[2] && (
-            <figcaption className="text-(--text-caption-color) text-[14px] leading-[14px] absolute left-0 bottom-[-28px] transform -translate-y-full">
+            <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
               {captionArray[2]}
             </figcaption>
           )}

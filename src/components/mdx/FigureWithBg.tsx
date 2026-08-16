@@ -20,16 +20,16 @@ export default function FigureWithBg({
         md:col-span-4 md:col-start-2 md:row-span-2
         lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-12 4xl:col-start-3 4xl:row-span-4
-        relative
-      "
+        h-[290px] lg:h-[450px]
+        relative"
       style={{ backgroundColor: bgcolor }}
     >
-      <div className="grid place-items-center h-100 overflow-hidden">
+      <div className="w-full h-full flex items-center justify-center">
         <LightboxImage
           src={src}
           alt={alt}
           bgcolor={bgcolor}
-          className="w-4/5 mx-auto object-contain block"
+          className="max-w-[80%] max-h-[80%] w-auto h-auto object-contain"
         />
       </div>
 
