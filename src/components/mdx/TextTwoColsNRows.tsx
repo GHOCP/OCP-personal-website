@@ -2,7 +2,7 @@ type TextTwoColsNRowsProps = {
   content: string;
   row_default: string;
   row_md: string;
-  row_lg: string
+  row_lg: string;
 };
 
 export default function TextTwoColsNRows({
@@ -11,12 +11,12 @@ export default function TextTwoColsNRows({
   row_md,
   row_lg,
 }: TextTwoColsNRowsProps) {
-
   const row_default_n = Number(row_default);
   const row_md_n = Number(row_md);
   const row_lg_n = Number(row_lg);
 
   const rowSpan_default = {
+    1: "row-span-1",
     2: "row-span-2",
     3: "row-span-3",
     4: "row-span-4",
@@ -29,6 +29,7 @@ export default function TextTwoColsNRows({
   }[row_default_n];
 
   const rowSpan_md = {
+    1: "md:row-span-1",
     2: "md:row-span-2",
     3: "md:row-span-3",
     4: "md:row-span-4",
@@ -41,6 +42,7 @@ export default function TextTwoColsNRows({
   }[row_md_n];
 
   const rowSpan_lg = {
+    1: "lg:row-span-1",
     2: "lg:row-span-2",
     3: "lg:row-span-3",
     4: "lg:row-span-4",
@@ -61,7 +63,15 @@ export default function TextTwoColsNRows({
       `}
     >
       <p
-        className="h-full [column-fill:auto] lg:columns-2 whitespace-pre-wrap page-text"
+        className="
+          h-full
+          [column-fill:auto]
+          lg:columns-2
+          lg:gap-[24px]
+          whitespace-pre-wrap
+          break-words
+          [overflow-wrap:anywhere]
+          page-text"
         dangerouslySetInnerHTML={{
           __html: content.replace(/\r?\n/g, "<br/>"),
         }}

@@ -51,15 +51,16 @@ export default function FigureWithBgOnePlusTwo({
       <div
         className="
           col-span-2
-          lg:col-span-1 
-          grid grid-cols-2 gap-x-[24px] gap-y-[30px]"
+          lg:col-span-1
+          grid grid-cols-2 gap-x-[24px] gap-y-[30px]
+          lg:grid-cols-1"
       >
         {/* <pic2> */}
         <figure
           className="
             col-span-1 row-span-1
-            lg:col-span-1
-            h-[130px] relative"
+            lg:col-span-1 lg:row-span-2
+            h-[130px] lg:h-[290px] relative"
           style={{ backgroundColor: bgcolor }}
         >
           <div className="w-full h-full flex items-center justify-center">
@@ -80,9 +81,9 @@ export default function FigureWithBgOnePlusTwo({
         {/* <pic3> */}
         <figure
           className="
-            col-span-1 row-span-1 
-            lg:col-span-1
-            h-[130px] relative"
+            col-span-1 row-span-1
+            lg:col-span-1 lg:row-span-2
+            h-[130px] lg:h-[290px] relative"
           style={{ backgroundColor: bgcolor }}
         >
           <div className="w-full h-full flex items-center justify-center">
