@@ -16,16 +16,14 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
         md:col-span-4 md:col-start-2 md:row-span-2
         lg:col-span-6 lg:col-start-2 lg:row-span-2
         3xl:col-span-12 4xl:col-start-3 4xl:row-s pan-3
-        relative
-      "
+        relative"
     >
       <h1
         className="
           text-[45px] leading-[50px] font-medium
-          md:text-[45px] md:leading-[50px]
+          md:text-[50px] md:leading-[60px]
           lg:text-[70px] lg:leading-[80px] 
-          3xl:text-[80px] 3xl:leading-[100px]
-        "
+          3xl:text-[80px] 3xl:leading-[100px]"
         id={id}
         data-toc={toc}
       >
@@ -43,8 +41,8 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
 
       <div
         className="
-        page-nav-size
-        absolute left-0 bottom-[-40px] transform -translate-y-full"
+          page-nav-size
+          absolute left-0 bottom-[-40px] transform -translate-y-full"
       >
         {date}
       </div>

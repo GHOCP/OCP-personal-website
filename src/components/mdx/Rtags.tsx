@@ -7,18 +7,18 @@ type RtagsProps = {
 
 export default function Rtags({ researchMethods, intro, contributorMe, contributorOthers }: RtagsProps) {
   return (
-    <ul className=" 
+    <ul
+      className=" 
       text-[10px] leading-[15px] col-span-2 row-span-2
       md:col-span-4 md:col-start-2 md:row-span-1 
       lg:col-span-6 lg:col-start-2 lg:row-span-1
-
-      grid gap-x-[24px] gap-y-[30px] grid-cols-2 lg:grid-cols-4 md:grid-cols-4"
+      grid gap-x-[24px] gap-y-[30px] grid-cols-2 md:grid-cols-4 lg:grid-cols-4"
     >
       <li
         className="
           col-span-2 row-span-1
-          md:col-span-1 md:row-span-1
-          lg:col-span-1 lg:row-span-1
+          md:col-span-1 
+          lg:col-span-1 
           bg-black text-white"
         dangerouslySetInnerHTML={{ __html: researchMethods }}
       />
@@ -30,13 +30,16 @@ export default function Rtags({ researchMethods, intro, contributorMe, contribut
       />
       <li
         className="
-          col-span-1 row-span-1"
+          col-start-1 col-span-1 row-span-1
+           md:col-start-3
+          lg:col-start-3"
         dangerouslySetInnerHTML={{ __html: contributorMe }}
       />
       <li
         className="
           col-start-2 col-span-1 row-span-1
-          lg:col-start-4 md:col-start-4"
+          md:col-start-4
+          lg:col-start-4"
         dangerouslySetInnerHTML={{ __html: contributorOthers }}
       />
     </ul>
