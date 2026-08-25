@@ -31,7 +31,7 @@ export default function Rtags({ researchMethods, intro, contributorMe, contribut
       <li
         className="
           col-start-1 col-span-1 row-span-1
-           md:col-start-3
+          md:col-start-3
           lg:col-start-3"
         dangerouslySetInnerHTML={{ __html: contributorMe }}
       />

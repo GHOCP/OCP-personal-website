@@ -15,14 +15,14 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
     <ul
       className="
         col-span-2 row-span-4
-        md:col-span-4 md:col-start-2 md:row-span-3 
+        md:col-span-4 md:col-start-2 md:row-span-2 
         lg:col-span-6 lg:col-start-2 lg:row-span-3
         3xl:col-span-1 4xl:col-start-3 4xl:row-span-5
         grid grid-cols-1 gap-x-[24px] gap-y-[30px]
-        lg:grid-cols-2"
+        md:grid-cols-2 lg:grid-cols-2"
     >
       {srcArray.map((src, index) => (
-        <li key={src} className="h-[290px] md:h-[450px] lg:h-[450px]">
+        <li key={src} className="h-[290px] md:h-[290px] lg:h-[450px]">
           <figure
             className="relative row-span-2 lg:col-span-1 h-full flex items-center justify-center"
             style={{ backgroundColor: bgcolor }}

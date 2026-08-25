@@ -13,7 +13,7 @@ export default function Ending() {
       <h2
         className="
           font-medium text-[32px] leading-[40px]
-          md:text-[35px] leading-[40px]
+          md:text-[35px] md:leading-[40px]
           lg:text-[35px] lg:leading-[40px]
           3xl:text-[80px] 3xl:leading-[100px] "
       >
@@ -23,7 +23,7 @@ export default function Ending() {
         href="/research"
         className="
           absolute left-1 page-nav-size text-(--background-research)
-          top-[-40px] md:top-[-30px]"
+          top-[-40px]"
       >
         &lt; - Back to Research -
       </Link>

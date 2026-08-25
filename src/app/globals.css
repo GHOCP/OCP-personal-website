@@ -62,7 +62,7 @@ body {
     /* pt-9 */
     --page-pr: 4.5rem;
     /* pr-12 */
-    --page-pb: 6rem;
+    --page-pb: 12rem;
     /* pb-24 */
 
     /* Grid-Column */
@@ -83,7 +83,7 @@ body {
     /* pb-32 */
 
     /* Grid-Column */
-    --grid-columns: repeat(6, 1fr);
+    --grid-columns: repeat(8, 1fr);
   }
 }
 

@@ -13,7 +13,7 @@ export default function BigText({ children }: BigTextProps) {
       className="
         col-span-2 row-span-4
         md:col-span-4 md:col-start-2 md:row-span-3
-        lg:col-span-6 lg:col-start-2 lg:row-span-3
+        lg:col-span-6 lg:col-start-2 lg:row-span-4
         3xl:col-span-8 4xl:col-start-3 4xl:row-span-5
         text-[45px] leading-[50px] font-medium
         lg:text-[64px] lg:leading-[80px]
