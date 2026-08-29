@@ -15,7 +15,7 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
         col-span-2 row-span-2
         md:col-span-4 md:col-start-2 md:row-span-2
         lg:col-span-6 lg:col-start-2 lg:row-span-2
-        3xl:col-span-12 4xl:col-start-3 4xl:row-s pan-3
+        3xl:col-span-12 3xl:col-start-3 3xl:row-span-3
         relative"
     >
       <h1
@@ -23,7 +23,7 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
           text-[45px] leading-[50px] font-medium
           md:text-[50px] md:leading-[60px]
           lg:text-[70px] lg:leading-[80px] 
-          3xl:text-[80px] 3xl:leading-[100px]"
+          3xl:text-[110px] 3xl:leading-[120px]"
         id={id}
         data-toc={toc}
       >

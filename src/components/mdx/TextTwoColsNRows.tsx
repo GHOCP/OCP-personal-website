@@ -3,6 +3,7 @@ type TextTwoColsNRowsProps = {
   row_default: string;
   row_md: string;
   row_lg: string;
+  row_3xl: string;
 };
 
 export default function TextTwoColsNRows({
@@ -10,10 +11,12 @@ export default function TextTwoColsNRows({
   row_default,
   row_md,
   row_lg,
+  row_3xl
 }: TextTwoColsNRowsProps) {
   const row_default_n = Number(row_default);
   const row_md_n = Number(row_md);
   const row_lg_n = Number(row_lg);
+  const row_3xl_n = Number(row_3xl);
 
   const rowSpan_default = {
     1: "row-span-1",
@@ -54,12 +57,26 @@ export default function TextTwoColsNRows({
     10: "lg:row-span-10",
   }[row_lg_n];
 
+  const rowSpan_3xl = {
+    1: "3xl:row-span-1",
+    2: "3xl:row-span-2",
+    3: "3xl:row-span-3",
+    4: "3xl:row-span-4",
+    5: "3xl:row-span-5",
+    6: "3xl:row-span-6",
+    7: "3xl:row-span-7",
+    8: "3xl:row-span-8",
+    9: "3xl:row-span-9",
+    10: "3xl:row-span-10",
+  }[row_3xl_n];
+
   return (
     <div
       className={`
         col-span-2 ${rowSpan_default}
         md:col-span-4 md:col-start-2 ${rowSpan_md}
         lg:col-span-6 lg:col-start-2 ${rowSpan_lg}
+        3xl:col-span-12 3xl:col-start-3 ${rowSpan_3xl}
       `}
     >
       <p
