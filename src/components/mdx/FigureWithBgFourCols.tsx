@@ -22,12 +22,12 @@ export default function FigureWithBgFourCols({
         col-span-2 row-span-2
         md:col-span-4 md:col-start-2 md:row-span-2 
         lg:col-span-6 lg:col-start-2 lg:row-span-2
-        3xl:col-span-1 4xl:col-start-3 4xl:row-span-5
+        3xl:col-span-12 3xl:col-start-3 3xl:row-span-4
         grid grid-cols-2 gap-x-[24px] gap-y-[30px]
-        lg:grid-cols-4"
+        lg:grid-cols-4 3xl:grid-cols-4"
     >
       {srcArray.map((src, index) => (
-        <li key={src} className="h-[130px] md:h-[130px] lg:h-[290px]">
+        <li key={src} className="h-[130px] md:h-[130px] lg:h-[290px] 3xl:h-[610px]">
           <figure
             className="relative h-full flex items-center justify-center"
             style={{ backgroundColor: bgcolor }}
