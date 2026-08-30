@@ -10,7 +10,7 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
 
-  const article = getArticle(slug);
+  const article = getArticle(slug, "photos");
 
   return (
     <main

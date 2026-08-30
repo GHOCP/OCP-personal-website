@@ -1,9 +1,9 @@
 import Link from "next/link";
 import ResearchItem from "@/components/ResearchItem";
-import { getResearchArticles } from "@/lib/reader";
+import { getArticles } from "@/lib/reader";
 
 export default function ResearchPage() {
-  const articles = getResearchArticles();
+  const articles = getArticles();
   return (
     <main
       id="top"

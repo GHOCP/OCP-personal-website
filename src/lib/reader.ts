@@ -2,21 +2,21 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const articlesDirectory = path.join(process.cwd(), "src/content/research");
+const contentDirectory = path.join(process.cwd(), "src/content");
 
 type FrontmatterDate = string | Date | undefined;
-
-type ResearchFrontmatter = {
+type ArticleFrontmatter = {
   title: string;
   date: string;
   cover?: string;
   number?: number;
 };
 
-type ResearchArticle = {
-  frontmatter: ResearchFrontmatter;
-  content: string;
-};
+type ArticleProps = { frontmatter: ArticleFrontmatter; content: string };
+
+function getContentDirectory(folder: string) {
+  return path.join(contentDirectory, folder);
+}
 
 function normalizeDate(date: FrontmatterDate) {
   if (!date) return "";
@@ -26,53 +26,61 @@ function normalizeDate(date: FrontmatterDate) {
   return String(date);
 }
 
-export function getResearchArticles() {
-  const filenames = fs.readdirSync(articlesDirectory);
-
-  const articles = filenames.map((filename) => {
-    const filePath = path.join(articlesDirectory, filename);
-
-    const fileContent = fs.readFileSync(filePath, "utf8");
-
-    const { data } = matter(fileContent);
-
-    return {
-      slug: filename.replace(".mdx", ""),
-      title: data.title,
-      date: data.date,
-      cover: data.cover,
-    };
-  });
-
+export function getArticles(folder: string = "research") {
+  const directory = getContentDirectory(folder);
+  const filenames = fs.readdirSync(directory);
+  const articles = filenames
+    .filter((filename) => filename.endsWith(".mdx"))
+    .map((filename) => {
+      const filePath = path.join(directory, filename);
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(fileContent);
+      return {
+        slug: filename.replace(/\.mdx$/, ""),
+        title: data.title,
+        date: data.date,
+        cover: data.cover,
+        number: data.number,
+      };
+    });
   return articles.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 }
 
-export function getResearchArticle(slug: string): ResearchArticle {
-  const filePath = path.join(articlesDirectory, `${slug}.mdx`);
-
+export function getArticle(
+  slug: string,
+  folder: string = "research",
+): ArticleProps {
+  const directory = getContentDirectory(folder);
+  const filePath = path.join(directory, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, "utf8");
-
   const { data, content } = matter(fileContent) as unknown as {
-    data: { title: string; date?: string | Date; cover?: string; number?: number };
+    data: {
+      title: string;
+      date?: string | Date;
+      cover?: string;
+      number?: number;
+    };
     content: string;
   };
-
   return {
     frontmatter: {
       title: data.title,
       date: normalizeDate(data.date),
       cover: data.cover,
+      number: data.number,
     },
     content,
   };
 }
 
-export function getResearchSlugs() {
-  const filenames = fs.readdirSync(articlesDirectory);
-
-  return filenames.map((filename) => filename.replace(".mdx", ""));
+export function getArticleSlugs(folder: string = "research") {
+  const directory = getContentDirectory(folder);
+  const filenames = fs.readdirSync(directory);
+  return filenames
+    .filter((filename) => filename.endsWith(".mdx"))
+    .map((filename) => filename.replace(/\.mdx$/, ""));
 }
 
 export function slugifySectionTitle(title: string) {
@@ -83,17 +91,12 @@ export function slugifySectionTitle(title: string) {
     .replace(/^-|-$/g, "");
 }
 
-export function getResearchSections(content: string) {
+export function getSections(content: string) {
   const sectionPattern = /<SemiTitle[^>]*title="([^"]+)"/g;
   const sections: { id: string; label: string }[] = [];
-
   for (const match of content.matchAll(sectionPattern)) {
     const label = match[1];
-    sections.push({
-      id: slugifySectionTitle(label),
-      label,
-    });
+    sections.push({ id: slugifySectionTitle(label), label });
   }
-
   return sections;
 }
