@@ -46,8 +46,7 @@ export default function ResearchPage() {
         xl:left-[calc(100vw-10rem+2px)]
         3xl:left-[calc(100vw-20rem+2px)]
         4xl:text-[28px] 4xl:leading-[40px]
-        grid gap-x-6 gap-y-[30px] auto-rows-[130px]
-        "
+        grid gap-x-6 gap-y-[30px] auto-rows-[130px]"
       >
         <Link href="/" className="row-span-1">
           Homepage

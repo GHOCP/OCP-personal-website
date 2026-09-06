@@ -11,6 +11,7 @@ import FigureWithBgOnePlusTwo from "./mdx/FigureWithBgOnePlusTwo"
 import FigureWithBgFourCols from "./mdx/FigureWithBgFourCols";
 import TextTwoColsNRows from "./mdx/TextTwoColsNRows";
 import Ending from "./mdx/Ending"
+import Figure from "./mdx/Figure";
 
 export const mdxComponents = {
   Divider,
@@ -25,5 +26,6 @@ export const mdxComponents = {
   TextTwoColsNRows,
   Rtags,
   BigText,
-  Ending
+  Ending,
+  Figure
 };

@@ -4,10 +4,24 @@ type MainTitleProps = {
   title: string;
   date: string;
   toc?: string;
+  backLink?: string;
+  color?: string;
 };
 
-export default function MainTitle({ title, date, toc }: MainTitleProps) {
+export default function MainTitle({
+  title,
+  date,
+  toc,
+  backLink,
+  color,
+}: MainTitleProps) {
   const id = toc?.toLowerCase().replace(/\s+/g, "-");
+
+  const getBackLabel = () => {
+    if (!backLink) return "Research";
+    const stripped = backLink.replace(/^\//, "");
+    return stripped.charAt(0).toUpperCase() + stripped.slice(1);
+  };
 
   return (
     <div
@@ -29,16 +43,13 @@ export default function MainTitle({ title, date, toc }: MainTitleProps) {
       >
         {title}
       </h1>
-
       <Link
-        href="/research"
-        className="
-          absolute left-1 page-nav-size text-(--background-research)
-          top-[-40px] md:top-[-30px]"
+        href={backLink ?? "/research"}
+        className="absolute left-1 page-nav-size top-[-40px] md:top-[-30px]"
+        style={{ color }}
       >
-        &lt; - Back to Research -
+        {`< - Back to ${getBackLabel()}  -`}
       </Link>
-
       <div
         className="
           page-nav-size

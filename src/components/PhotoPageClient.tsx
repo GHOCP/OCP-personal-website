@@ -10,6 +10,7 @@ type Photo = {
   date: string;
   cover?: string;
   category?: string;
+  number?: number;
 };
 
 type Props = {
@@ -66,25 +67,20 @@ export default function PhotoPageClient({ articles }: Props) {
 
         <div className="row-span-2 flex flex-col">
           {categories.map((category) => {
-            const isSelected = (selectedCategory === category);
-
+            const isSelected = selectedCategory === category;
             return (
               <span
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className="grid grid-cols-[8px_auto] gap-2 items-center cursor-pointer text-left"
+                className="flex items-center gap-2 cursor-pointer text-left"
               >
                 <span
-                  className={`
-                    block
-                    w-2
-                    h-2
-                    rounded-full
-                    bg-white
-                    ${isSelected ? "opacity-100" : "opacity-0"}
-                  `}
-                />
-                <span>{category}</span>
+                  style={{
+                    opacity: isSelected ? 1 : 0.3,
+                  }}
+                >
+                  {category}
+                </span>
               </span>
             );
           })}
@@ -97,4 +93,3 @@ export default function PhotoPageClient({ articles }: Props) {
     </>
   );
 }
-
