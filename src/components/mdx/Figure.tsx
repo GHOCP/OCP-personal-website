@@ -16,25 +16,31 @@ export default function FigureWithBg({
   return (
     <figure
       className="
-        col-span-2 row-span-3
-        md:col-span-4 md:col-start-2 md:row-span-5
-        lg:col-span-6 lg:col-start-2 lg:row-span-8
+        col-span-2 row-span-4
+        md:col-span-4 md:col-start-2 md:row-span-4
+        lg:col-span-6 lg:col-start-2 lg:row-span-4
         3xl:col-span-12 3xl:col-start-3 3xl:row-span-6
-        h-[290px] lg:h-[450px] 3xl:h-[930]
+        h-[450px] md:h-[450px] lg:h-[450px] 3xl:h-[770px]
         grid grid-cols-1 gap-x-[24px] gap-y-[30px]
         relative"
     >
-      <div className="flex items-center justify-center h-[290px]">
+      <div className="flex items-center justify-center h-[450px] 3xl:h-[770px]">
         <LightboxImage
           src={src}
           alt={alt}
           bgcolor={bgcolor}
-          className="max-w-[80%] max-h-[80%] w-auto h-auto object-contain"
+          className="max-w-[95%] max-h-[95%] w-auto h-auto object-contain"
         />
       </div>
-
       {caption && (
-        <figcaption className="text-(--text-caption-color) page-nav-size">
+        <figcaption
+          className="
+            w-[60%]
+            mx-auto
+            text-(--text-caption-color)
+            page-nav-size
+            text-center"
+        >
           {caption}
         </figcaption>
       )}
