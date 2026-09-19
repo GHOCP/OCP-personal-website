@@ -1,6 +1,20 @@
 import Link from "next/link";
 
-export default function Ending() {
+type EndingProps = {
+  backLink?: string;
+  color?: string;
+};
+
+export default function Ending({ 
+  backLink,
+  color, 
+}: EndingProps) {
+  const getBackLabel = () => {
+    if (!backLink) return "Research";
+    const stripped = backLink.replace(/^\//, "");
+    return stripped.charAt(0).toUpperCase() + stripped.slice(1);
+  };
+
   return (
     <div
       className="
@@ -20,21 +34,12 @@ export default function Ending() {
         Telos.
       </h2>
       <Link
-        href="/research"
-        className="
-          absolute left-1 page-nav-size text-(--background-research)
-          top-[-40px]"
+        href={backLink ?? "/research"}
+        className="absolute left-1 page-nav-size text-(--background-research) top-[-40px]"
+        style={{ color }}
       >
-        &lt; - Back to Research -
+        {`< - Back to ${getBackLabel()}  -`}
       </Link>
     </div>
   );
 }
-
-// before:absolute
-// before:left-[-64px]
-// before:top-[20%]
-// before:h-[12px]
-// before:w-[19.42px]
-// before:bg-black
-// before:content-['']
