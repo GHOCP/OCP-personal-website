@@ -29,36 +29,35 @@ export default function PhotoItem({
   }, [image]);
 
   return (
-    <Link
-      href={`/photos/${slug}`}
+    <div
       className="
-        row-span-2
-        md:col-span-2 md:col-start-2 md:row-span-2
-        lg:col-span-2 lg:col-start-2 lg:row-span-2 
-        xl:col-span-2 xl:row-span-1 
-        3xl:col-span-8 4xl:col-start-3 4xl:row-span-5"
+        row-span-2 col-span-1
+        md:col-span-3 md:row-span-2
+        lg:col-span-2 lg:row-span-2 
+        3xl:col-span-4 3xl:row-span-4
+        grid grid-rows-2 gap-x-[24px] gap-y-[30px]
+        md:grid-cols-3 lg:grid-cols-2 3xl:grid-cols-4"
     >
-      <div
+      <Link
+        href={`/photos/${slug}`}
         className="
-          col-span-1 row-span-2 
-          relative bg-cover bg-center h-[130px] xl:col-span-1"
+          md:col-start-2 md:col-span-2
+          lg:col-start-1 lg:col-span-1
+          3xl:col-start-1 3xl:col-span-2 3xl:row-span-2
+          relative bg-cover bg-center h-[130px] 3xl:h-[290px]"
         style={{
-          backgroundImage: imageUrl
-            ? `url(${imageUrl})`
-            : undefined,
+          backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,
         }}
       >
-        <div
-          className="absolute bottom-20 left-1 text-white text-[14px] leading-[20px]"
-        >
+        <div className="absolute bottom-20 left-1 text-white text-[14px] leading-[20px]">
           {title}
         </div>
 
         <div className="absolute bottom-0 left-1 page-date-size text-white">
           {date}
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
