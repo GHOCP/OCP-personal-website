@@ -77,6 +77,8 @@ export default function PhotoPageClient({ articles }: Props) {
                 <span
                   style={{
                     opacity: isSelected ? 1 : 0.3,
+                    display: "block",
+                    lineHeight: "2.5",
                   }}
                 >
                   {category}

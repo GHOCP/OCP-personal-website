@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx-components";
 import { getArticle } from "@/lib/reader";
-import TOC from "@/components/TOC";
+// import TOC from "@/components/TOC";
 
 export default async function ArticlePage({
   params,
@@ -19,8 +19,7 @@ export default async function ArticlePage({
     >
       <section className="grid-system relative">
         <MDXRemote source={article.content} components={mdxComponents} />
-
-        <div
+        {/* <div
           className="
             hidden fixed page-nav-size
             md:block md:col-start-6 md:col-span-1 md:row-start-1 md:row-span-10
@@ -28,7 +27,7 @@ export default async function ArticlePage({
             3xl:block 3xl:col-start-15 3xl:col-span-1 3xl:row-start-1 3xl:row-span-10"
         >
           <TOC />
-        </div>
+        </div> */}
       </section>
     </main>
   );
