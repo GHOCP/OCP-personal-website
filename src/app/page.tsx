@@ -2,63 +2,67 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-(--background-grey-1) responsive-padding-1 h-full">
+    <main className="responsive-padding-1 h-full">
       <section className="relative grid-system">
         {/* Title */}
         <header
           className="
             col-start-1 col-span-2 row-start-1 row-span-1
-            text-black page-title-font text-[55px] leading-[60px] md:text-[64px] md:leading-[80px] lg:text-[60px] lg:leanding-[80px] z-10"
+            text-black page-title-font text-[55px] leading-[60px] md:text-[55px] md:leading-[60px] lg:text-[60px] lg:leanding-[80px] 2xl:text-[80px] 2xl:leading-[100px] 3xl:text-[80px] 3xl:leading-[100px] z-10"
         >
           <h1>Ouchngpui</h1>
         </header>
 
-        {/* Writing */}
+        {/* Writings */}
         <div
           className="
             relative bg-(--background-writing) group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
             col-start-1 col-span-1 row-start-3 row-span-1
             md:col-start-5 md:col-span-1 md:row-start-1 md:row-span-1
-            lg:col-start-5 lg:col-span-1 lg:row-start-1 lg:row-span-1
-            xl:col-start-5 xl:col-span-1 xl:row-start-1 xl:row-span-1
-            2xl:col-start-7 2xl:col-span-2 2xl:row-start-1 2xl:row-span-2
+            lg:col-start-6 lg:col-span-1 lg:row-start-1 lg:row-span-1
+            2xl:col-start-6 2xl:col-span-1 2xl:row-start-1 2xl:row-span-2
+            3xl:col-start-6 3xl:col-span-1 3xl:row-start-1 3xl:row-span-2
             flex items-center justify-center z-10"
         >
-          <svg
-            className="w-99/100 h-99/100 object-contain
-              transition-all duration-500 ease-out
-              group-hover:scale-105
-              group-hover:-translate-y-2
-              group-hover:translate-x-2"
-            viewBox="0 0 128 128"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M128 128H72V120H128V128ZM56 112H0V104H56V112ZM128 76H72V68H128V76ZM56 60H0V52H56V60ZM128 24H72V16H128V24ZM56 8H0V0H56V8Z"
-              fill="white"
-            />
-          </svg>
+          <Link href="/writings">
+            <svg
+              className="
+                w-99/100 h-99/100 object-contain
+                transition-all duration-500 ease-out
+                group-hover:scale-105
+                group-hover:-translate-y-2
+                group-hover:translate-x-2"
+              viewBox="0 0 128 128"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M128 128H72V120H128V128ZM56 112H0V104H56V112ZM128 76H72V68H128V76ZM56 60H0V52H56V60ZM128 24H72V16H128V24ZM56 8H0V0H56V8Z"
+                fill="white"
+              />
+            </svg>
+          </Link>
         </div>
 
         {/* Research */}
         <div
-          className="relative bg-(--background-research)
-          group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
-          col-start-2 col-span-1 row-start-3 row-span-1
-          md:col-start-6 md:col-span-1 md:row-start-1 md:row-span-1
-          lg:col-start-6 lg:col-span-1 lg:row-start-1 lg:row-span-1
-          xl:col-start-6 xl:col-span-1 xl:row-start-1 xl:row-span-1
-          2xl:col-start-9 2xl:col-span-2 2xl:row-start-1 2xl:row-span-2
-          flex items-center justify-center z-10"
+          className="
+            relative bg-(--background-research)
+            group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
+            col-start-2 col-span-1 row-start-4 row-span-1
+            md:col-start-6 md:col-span-1 md:row-start-1 md:row-span-1
+            lg:col-start-7 lg:col-span-1 lg:row-start-1 lg:row-span-1
+            2xl:col-start-7 2xl:col-span-1 2xl:row-start-1 2xl:row-span-2
+            flex items-center justify-center z-10"
         >
           <Link href="/research">
             <svg
-              className="w-99/100 h-99/100 object-contain
-              transition-all duration-500 ease-out
-              group-hover:scale-105
-              group-hover:-translate-y-2
-              group-hover:translate-x-2"
+              className="
+                w-99/100 h-99/100 object-contain
+                transition-all duration-500 ease-out
+                group-hover:scale-105
+                group-hover:-translate-y-2
+                group-hover:translate-x-2"
               viewBox="0 0 128 128"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,22 +77,23 @@ export default function Home() {
 
         {/* Photos */}
         <div
-          className="relative bg-(--background-photos)
-          group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2 
-          col-start-1 col-span-1 row-start-4 row-span-1
-          md:col-start-5 md:col-span-1 md:row-start-2 md:row-span-1
-          lg:col-start-5 lg:col-span-1 lg:row-start-2 lg:row-span-1
-          xl:col-start-5 xl:col-span-1 xl:row-start-2 xl:row-span-1
-          2xl:col-start-7 2xl:col-span-2 2xl:row-start-3 2xl:row-span-2
-          flex items-center justify-center z-10"
+          className="
+            relative bg-(--background-photos)
+            group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2 
+            col-start-1 col-span-1 row-start-4 row-span-1
+            md:col-start-5 md:col-span-1 md:row-start-2 md:row-span-1
+            lg:col-start-6 lg:col-span-1 lg:row-start-2 lg:row-span-1
+            2xl:col-start-6 2xl:col-span-1 2xl:row-start-3 2xl:row-span-2
+            flex items-center justify-center z-10"
         >
           <Link href="/photos">
             <svg
-              className="w-99/100 h-99/100 object-contain
-              transition-all duration-500 ease-out
-              group-hover:scale-105
-              group-hover:-translate-y-2
-              group-hover:translate-x-2"
+              className="
+                w-99/100 h-99/100 object-contain
+                transition-all duration-500 ease-out
+                group-hover:scale-105
+                group-hover:-translate-y-2
+                group-hover:translate-x-2"
               viewBox="0 0 128 128"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -103,40 +108,43 @@ export default function Home() {
 
         {/* Design */}
         <div
-          className="relative bg-(--background-design) 
-          group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
-          col-start-2 col-span-1 row-start-4 row-span-1
-          md:col-start-6 md:col-span-1 md:row-start-2 md:row-span-1
-          lg:col-start-6 lg:col-span-1 lg:row-start-2 lg:row-span-1
-          xl:col-start-6 xl:col-span-1 xl:row-start-2 xl:row-span-1
-          2xl:col-start-9 2xl:col-span-2 2xl:row-start-3 2xl:row-span-2
-          flex items-center justify-center z-10"
+          className="
+            relative bg-(--background-design) 
+            group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
+            col-start-2 col-span-1 row-start-3 row-span-1
+            md:col-start-6 md:col-span-1 md:row-start-2 md:row-span-1
+            lg:col-start-7 lg:col-span-1 lg:row-start-2 lg:row-span-1
+            2xl:col-start-7 2xl:col-span-1 2xl:row-start-3 2xl:row-span-2
+            flex items-center justify-center z-10"
         >
-          <svg
-            className="w-99/100 h-99/100 object-contains
-              transition-all duration-500 ease-out
-              group-hover:scale-105
-              group-hover:-translate-y-2
-              group-hover:translate-x-2"
-            viewBox="0 0 128 128"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M74.866 0C95.555 0 114.287 8.42391 127.833 22.0272L125.312 24.5554L122.792 27.0765C110.528 14.7616 93.5856 7.15152 74.866 7.15152C41.9232 7.15152 14.4828 30.741 8.39733 61.9961C20.8653 37.9139 45.9424 21.4545 74.866 21.4545C95.555 21.4545 114.287 29.8785 127.833 43.4817L125.312 46.0099L122.792 48.5311C110.528 36.2162 93.5856 28.6061 74.866 28.6061C41.9232 28.6061 14.4828 52.1955 8.39733 83.4503C20.8653 59.3685 45.9424 42.9091 74.866 42.9091C95.555 42.9091 114.287 51.333 127.833 64.9363L125.312 67.4644L122.792 69.9856C110.528 57.6707 93.5856 50.0606 74.866 50.0606C37.4564 50.0606 7.1301 80.4781 7.1301 118H0C0 110.543 1.1013 103.345 3.11942 96.5455H0C0 89.0886 1.1013 81.8906 3.11942 75.0909H0C0 33.6194 33.5186 0 74.866 0Z"
-              fill="white"
-            />
-          </svg>
+          <Link href="/design">
+            <svg
+              className="
+                w-99/100 h-99/100 object-contains
+                transition-all duration-500 ease-out
+                group-hover:scale-105
+                group-hover:-translate-y-2
+                group-hover:translate-x-2"
+              viewBox="0 0 128 128"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M74.866 0C95.555 0 114.287 8.42391 127.833 22.0272L125.312 24.5554L122.792 27.0765C110.528 14.7616 93.5856 7.15152 74.866 7.15152C41.9232 7.15152 14.4828 30.741 8.39733 61.9961C20.8653 37.9139 45.9424 21.4545 74.866 21.4545C95.555 21.4545 114.287 29.8785 127.833 43.4817L125.312 46.0099L122.792 48.5311C110.528 36.2162 93.5856 28.6061 74.866 28.6061C41.9232 28.6061 14.4828 52.1955 8.39733 83.4503C20.8653 59.3685 45.9424 42.9091 74.866 42.9091C95.555 42.9091 114.287 51.333 127.833 64.9363L125.312 67.4644L122.792 69.9856C110.528 57.6707 93.5856 50.0606 74.866 50.0606C37.4564 50.0606 7.1301 80.4781 7.1301 118H0C0 110.543 1.1013 103.345 3.11942 96.5455H0C0 89.0886 1.1013 81.8906 3.11942 75.0909H0C0 33.6194 33.5186 0 74.866 0Z"
+                fill="white"
+              />
+            </svg>
+          </Link>
         </div>
 
         {/* Words */}
         <div
-          className="text-black leading-2.5 text-[8px] 2xl:text-[14px] 2xl:leading-4.5
-          col-start-1 col-span-2 row-start-5 row-span-2
-          md:col-start-3 md:col-span-2 md:row-start-3 md:row-span-1
-          lg:col-start-3 lg:col-span-2 lg:row-start-3 lg:row-span-1
-          xl:col-start-3 xl:col-span-2 xl:row-start-3 xl:row-span-1
-          2xl:col-start-3 2xl:col-span-4 2xl:row-start-5 2xl:row-span-1 z-10"
+          className="
+            text-black leading-2.5 text-[8px] 2xl:text-[14px] 2xl:leading-4.5
+            col-start-1 col-span-2 row-start-5 row-span-2
+            md:col-start-5 md:col-span-2 md:row-start-3 md:row-span-1
+            lg:col-start-6 lg:col-span-2 lg:row-start-3 lg:row-span-1
+            2xl:col-start-6 2xl:col-span-2 2xl:row-start-5 2xl:row-span-2 z-10"
         >
           <p>
             The new epoch calls for a more humane society, one that defies the
@@ -153,10 +161,13 @@ export default function Home() {
         {/* Logo */}
         <div
           className="
-          absolute bottom-5 -right-10 z-99 overflow-hidden opacity-100"
+            absolute 
+            z-99 opacity-100 bottom-5 -right-10
+            md:-bottom-50 md:-right-15
+            lg:-bottom-65 lg:-right-20"
         >
           <svg
-            className="w-[200px] h-[200px]"
+            className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[320px] lg:h-[320px]"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
