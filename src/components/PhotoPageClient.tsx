@@ -53,7 +53,7 @@ export default function PhotoPageClient({ articles }: Props) {
 
       <nav
         className="fixed top-0 nav-top text-white page-nav-size 
-          left-[calc(100vw-4rem+2px)]
+          left-[calc(100vw-4rem-20px)]
           md:left-[calc(100vw-4.5rem+2px)]
           lg:left-[calc(100vw-6rem+2px)]
           xl:left-[calc(100vw-10rem+2px)]

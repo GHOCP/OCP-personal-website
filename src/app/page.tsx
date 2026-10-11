@@ -167,7 +167,7 @@ export default function Home() {
             lg:-bottom-65 lg:-right-20"
         >
           <svg
-            className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[320px] lg:h-[320px]"
+            className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px]"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
