@@ -37,7 +37,15 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
             </div>
 
             {captionArray[index] && (
-              <figcaption className="text-(--text-caption-color) page-nav-size absolute left-0 bottom-[-40px] transform -translate-y-full">
+              <figcaption 
+                className="
+                  text-(--text-caption-color) 
+                  page-nav-size 
+                  absolute 
+                  left-0 
+                  bottom-[-40px] 
+                  transform 
+                  -translate-y-full">
                 {captionArray[index]}
               </figcaption>
             )}

@@ -35,11 +35,10 @@ export default function FigureWithBg({
       {caption && (
         <figcaption
           className="
-            w-[60%]
+            w-[50%]
             mx-auto
             text-(--text-caption-color)
-            page-nav-size
-            text-center"
+            page-nav-size"
         >
           {caption}
         </figcaption>
