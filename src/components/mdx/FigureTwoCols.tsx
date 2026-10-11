@@ -36,7 +36,7 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
                 src={src}
                 alt={altArray[index] || ""}
                 bgcolor={bgcolor}
-                className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain"
+                className="max-w-[95%] max-h-[95%] w-auto h-auto object-contain"
               />
             </div>
 
