@@ -72,8 +72,7 @@ export default function ResearchItem({
             sizes="
               (min-width: 2560px) 50vw,
               (min-width: 768px) 50vw,
-              100vw
-            "
+              100vw"
             className="object-cover object-center"
           />
         )}

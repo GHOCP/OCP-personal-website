@@ -74,8 +74,6 @@ export default function PhotoItem({
           />
         )}
 
-        <div className="absolute inset-0 -z-0 bg-black/10" />
-
         <div className="absolute bottom-20 left-1 z-10 text-white text-[14px] leading-[20px]">
           {title}
         </div>
