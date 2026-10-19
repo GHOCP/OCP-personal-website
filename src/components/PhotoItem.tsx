@@ -46,8 +46,7 @@ export default function PhotoItem({
         lg:col-span-2 lg:row-span-2
         3xl:col-span-4 3xl:row-span-4
         grid grid-rows-2 gap-x-[24px] gap-y-[30px]
-        md:grid-cols-3 lg:grid-cols-2 3xl:grid-cols-4
-      "
+        md:grid-cols-3 lg:grid-cols-2 3xl:grid-cols-4"
     >
       <Link
         href={`/photos/${slug}`}
@@ -56,8 +55,7 @@ export default function PhotoItem({
           lg:col-start-1 lg:col-span-1
           3xl:col-start-1 3xl:col-span-2 3xl:row-span-2
           relative isolate overflow-hidden
-          h-[130px] 3xl:h-[290px]
-        "
+          h-[130px] 3xl:h-[290px]"
       >
         {imageUrl && (
           <Image
@@ -68,8 +66,7 @@ export default function PhotoItem({
               (min-width: 2560px) 600px,
               (min-width: 1024px) 25vw,
               (min-width: 768px) 50vw,
-              100vw
-            "
+              100vw"
             className="object-cover object-center"
           />
         )}

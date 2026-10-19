@@ -52,8 +52,7 @@ export default function ResearchItem({
         lg:grid-cols-[repeat(4,1fr)]
         gap-x-[24px]
         gap-y-[30px]
-        auto-rows-[130px]
-      "
+        auto-rows-[130px]"
     >
       {/* Cover image */}
       <div
