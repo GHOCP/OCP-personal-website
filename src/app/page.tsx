@@ -16,7 +16,7 @@ export default function Home() {
         {/* Writings */}
         <div
           className="
-            relative bg-(--background-writing) group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
+            relative bg-(--background-writings) group overflow-hidden cursor-pointer transition-all duration-200 hover:-translate-y-2
             col-start-1 col-span-1 row-start-3 row-span-1
             md:col-start-5 md:col-span-1 md:row-start-1 md:row-span-1
             lg:col-start-6 lg:col-span-1 lg:row-start-1 lg:row-span-1
