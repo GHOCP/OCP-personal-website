@@ -66,7 +66,7 @@ export default function DesignItem({ slug, title, date, image }: Props) {
             className="object-cover object-center"
           />
         )}
-        <div className="absolute bottom-0 left-1 z-10 page-date-size text-white">
+        <div className="absolute bottom-4 left-16 z-10 page-date-size text-white">
           {date}
         </div>
       </div>

@@ -34,23 +34,23 @@ export default function WritingsItem({ slug, title, date, image }: Props) {
   }, [image]);
 
   return (
-    <Link
-      href={`/Writingss/${slug}`}
+    <div
       className="
         row-span-2 col-span-2
         md:col-span-6 md:row-span-2
         lg:col-span-8 lg:row-span-2
         3xl:col-span-4 3xl:row-span-4
         grid grid-rows-2 gap-x-[24px] gap-y-[30px]
-        md:grid-cols-6 md:grid-rows-1 lg:grid-cols-8 lg:grid-rows-1 3xl:grid-cols-16 3xl:grid-rows-1"
+        md:grid-cols-6 md:grid-rows-2 lg:grid-cols-8 lg:grid-rows-2 3xl:grid-cols-16 3xl:grid-rows-2 relative"
     >
-      <div
+      <Link
+        href={`/Writingss/${slug}`}
         className="
           row-start-1
           md:col-start-1 md:col-span-1
           lg:col-start-1 lg:col-span-1
           3xl:col-start-1 3xl:col-span-2 3xl:row-start-1 3xl:row-span-2
-          relative isolate overflow-hidden
+          relative isolate
           h-[130px] 3xl:h-[290px]"
       >
         {imageUrl && (
@@ -66,13 +66,11 @@ export default function WritingsItem({ slug, title, date, image }: Props) {
             className="object-cover object-center"
           />
         )}
-        <div className="absolute bottom-0 left-1 z-10 page-date-size text-white">
-          {date}
-        </div>
-      </div>
-      <div
+      </Link>
+      <Link
+        href={`/Writingss/${slug}`}
         className="
-          row-start-2
+          row-start-2 row-span-1 
           md:col-start-2 md:row-start-1 md:col-span-4
           lg:col-start-2 lg:row-start-1 lg:col-span-5
           3xl:row-start-3 3xl:col-start-3
@@ -83,7 +81,15 @@ export default function WritingsItem({ slug, title, date, image }: Props) {
         3xl:text-[60px] 3xl:leading-[80px]"
       >
         {title}
+      </Link>
+      <div
+        className="absolute 
+        bottom-[25px] left-0 
+        md:bottom-[100px] lg:bottom- 3xl:bottom-
+        z-99 page-date-size text-white"
+      >
+        {date}
       </div>
-    </Link>
+    </div>
   );
 }
