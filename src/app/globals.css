@@ -40,14 +40,9 @@ body {
 
   /* Default (Mobile, <640px) padding */
   --page-pl: 2rem;
-  /* pl-4 */
   --page-pt: 8rem;
-  /* pt-6 */
   --page-pr: 3rem;
-  /* pr-6 */
   --page-pb: 12rem;
-  /* pb-16 */
-
   /* Grid-Column */
   --grid-columns: repeat(2, 1fr);
 }
@@ -55,15 +50,10 @@ body {
 /* Tablet, md (768px+) */
 @media (min-width: 768px) {
   :root {
-    --page-pl: 1.5rem;
-    /* pl-6 */
-    --page-pt: 3rem;
-    /* pt-9 */
+    --page-pl: 3rem;
+    --page-pt: 9rem;
     --page-pr: 4.5rem;
-    /* pr-12 */
     --page-pb: 12rem;
-    /* pb-24 */
-
     /* Grid-Column */
     --grid-columns: repeat(6, 1fr);
   }
@@ -72,15 +62,10 @@ body {
 /* Desktop, lg (1024px+) */
 @media (min-width: 1024px) {
   :root {
-    --page-pl: 2rem;
-    /* pl-10 */
-    --page-pt: 4rem;
-    /* pt-12 */
-    --page-pr: 6rem;
-    /* pr-16 */
-    --page-pb: 8rem;
-    /* pb-32 */
-
+    --page-pl: 80px;
+    --page-pt: 120px;
+    --page-pr: 160px;
+    --page-pb: 240px;
     /* Grid-Column */
     --grid-columns: repeat(8, 1fr);
   }
@@ -89,15 +74,10 @@ body {
 /* Desktop, xl (1280px+) */
 @media (min-width: 1280px) {
   :root {
-    --page-pl: 5rem;
-    /* pl-10 */
-    --page-pt: 7.5rem;
-    /* pt-12 */
-    --page-pr: 10rem;
-    /* pr-16 */
-    --page-pb: 25rem;
-    /* pb-32 */
-
+    --page-pl: 80px;
+    --page-pt: 120px;
+    --page-pr: 160px;
+    --page-pb: 240px;
     /* Grid-Column */
     --grid-columns: repeat(8, 1fr);
   }
@@ -107,14 +87,9 @@ body {
 @media (min-width: 2560px) {
   :root {
     --page-pl: 10rem;
-    /* pl-10 */
     --page-pt: 15rem;
-    /* pt-12 */
     --page-pr: 20rem;
-    /* pr-16 */
     --page-pb: 80rem;
-    /* pb-32 */
-
     /* Grid-Column */
     --grid-columns: repeat(16, 1fr);
   }

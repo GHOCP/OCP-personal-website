@@ -54,12 +54,11 @@ export default function PhotoPageClient({ articles }: Props) {
       <nav
         className="fixed top-0 nav-top text-white page-nav-size 
           left-[calc(100vw-4rem-20px)]
-          md:left-[calc(100vw-4.5rem+2px)]
-          lg:left-[calc(100vw-6rem+2px)]
+          md:left-[calc(100vw-4.5rem-16px)]
+          lg:left-[calc(100vw-160px+2px)]
           xl:left-[calc(100vw-10rem+2px)]
           3xl:left-[calc(100vw-20rem+2px)]
-          4xl:text-[28px] 4xl:leading-[40px]
-          grid gap-x-6 gap-y-[30px] auto-rows-[130px]"
+          grid gap-x-6 gap-y-[30px] auto-rows-[130px] z-99"
       >
         <Link href="/" className="row-span-1">
           Homepage

@@ -84,9 +84,9 @@ export default function WritingsItem({ slug, title, date, image }: Props) {
       </Link>
       <div
         className="absolute 
-        bottom-[25px] left-0 
-        md:bottom-[100px] lg:bottom- 3xl:bottom-
-        z-99 page-date-size text-white"
+          bottom-[25px] left-0 
+          md:bottom-[100px] lg:bottom- 3xl:bottom-
+          z-99 page-date-size text-white"
       >
         {date}
       </div>
