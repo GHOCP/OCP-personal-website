@@ -4,13 +4,14 @@ type FigureProps = {
   srcs: string;
   alts?: string;
   captions?: string;
-  bgcolor: string;
+  bgcolors: string;
 };
 
-export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions = "", bgcolor }: FigureProps) {
+export default function FigureWithBgTwoCols({ srcs = "", alts = "", captions = "", bgcolors = "" }: FigureProps) {
   const srcArray = srcs.split('&&&').filter((s): s is string => !!s);
   const altArray = alts?.split('&&&').filter((s): s is string => !!s);
   const captionArray = captions?.split('&&&').filter((s): s is string => !!s);
+  const bgcolorArray = bgcolors?.split("&&&").filter((s): s is string => !!s);
   return (
     <ul
       className="
@@ -25,13 +26,13 @@ export default function FigureWithBgThreeCols({ srcs = "", alts = "", captions =
         <li key={src} className="h-[290px] md:h-[290px] lg:h-[450px] 3xl:h-[610]">
           <figure
             className="relative row-span-2 lg:col-span-1 h-full flex items-center justify-center"
-            style={{ backgroundColor: bgcolor }}
+            style={{ backgroundColor: bgcolorArray[index] || "" }}
           >
             <div className="w-full h-full flex items-center justify-center">
               <LightboxImage
                 src={src}
                 alt={altArray[index] || ""}
-                bgcolor={bgcolor}
+                bgcolor={bgcolorArray[index] || ""}
                 className="max-w-[90%] max-h-[90%] w-auto h-auto object-contain"
               />
             </div>

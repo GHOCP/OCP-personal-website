@@ -4,18 +4,19 @@ type FigureProps = {
   srcs: string;
   alts?: string;
   captions?: string;
-  bgcolor: string;
+  bgcolors: string;
 };
 
 export default function FigureWithBgOnePlusTwo({
   srcs = "",
   alts = "",
   captions = "",
-  bgcolor,
+  bgcolors = "",
 }: FigureProps) {
   const srcArray = srcs.split("&&&").filter((s): s is string => !!s);
   const altArray = alts?.split("&&&").filter((s): s is string => !!s);
   const captionArray = captions?.split("&&&").filter((s): s is string => !!s);
+  const bgcolorArray = bgcolors?.split("&&&").filter((s): s is string => !!s);
   return (
     <div
       className="
@@ -35,7 +36,7 @@ export default function FigureWithBgOnePlusTwo({
           3xl:col-span-2 3xl:row-span-4
           h-[290px] md:h-[290px] lg:h-[610px] 3xl:h-[610px]
           relative"
-        style={{ backgroundColor: bgcolor }}
+        style={{ backgroundColor: bgcolorArray[0] || "" }}
       >
         <div className="w-full h-full flex items-center justify-center">
           <LightboxImage
@@ -66,7 +67,7 @@ export default function FigureWithBgOnePlusTwo({
             lg:col-span-1 lg:row-span-2
             3xl:col-span-1 3xl:row-span-2
             h-[130px] md:h-[130px] lg:h-[290px] 3xl:h-[290px] relative"
-          style={{ backgroundColor: bgcolor }}
+          style={{ backgroundColor: bgcolorArray[1] || "" }}
         >
           <div className="w-full h-full flex items-center justify-center">
             <LightboxImage
@@ -90,7 +91,7 @@ export default function FigureWithBgOnePlusTwo({
             lg:col-span-1 lg:row-span-2
             3xl:col-span-1 3xl:row-span-2
             h-[130px] md:h-[130px] lg:h-[290px] 3xl:h-[290px] relative"
-          style={{ backgroundColor: bgcolor }}
+          style={{ backgroundColor: bgcolorArray[2] || "" }}
         >
           <div className="w-full h-full flex items-center justify-center">
             <LightboxImage
