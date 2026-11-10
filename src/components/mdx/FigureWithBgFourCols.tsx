@@ -4,18 +4,19 @@ type FigureProps = {
   srcs: string;
   alts?: string;
   captions?: string;
-  bgcolor: string;
+  bgcolors?: string;
 };
 
 export default function FigureWithBgFourCols({
   srcs = "",
   alts = "",
   captions = "",
-  bgcolor,
+  bgcolors = "",
 }: FigureProps) {
   const srcArray = srcs.split("&&&").filter((s): s is string => !!s);
   const altArray = alts?.split("&&&").filter((s): s is string => !!s);
   const captionArray = captions?.split("&&&").filter((s): s is string => !!s);
+  const bgcolorArray = bgcolors?.split("&&&").filter((s): s is string => !!s);
   return (
     <ul
       className="
@@ -27,10 +28,13 @@ export default function FigureWithBgFourCols({
         lg:grid-cols-4 3xl:grid-cols-4"
     >
       {srcArray.map((src, index) => (
-        <li key={src} className="h-[130px] md:h-[130px] lg:h-[290px] 3xl:h-[610px]">
+        <li
+          key={src}
+          className="h-[130px] md:h-[130px] lg:h-[290px] 3xl:h-[610px]"
+        >
           <figure
             className="relative h-full flex items-center justify-center"
-            style={{ backgroundColor: bgcolor }}
+            style={{ backgroundColor: bgcolorArray[index] || "" }}
           >
             <div className="w-full h-full flex items-center justify-center">
               <LightboxImage
