@@ -20,12 +20,12 @@ export default async function ArticlePage({
       <section className="grid-system relative">
         <MDXRemote source={article.content} components={mdxComponents} />
         <div
-          className="fixed top-0 nav-top text-white page-nav-size 
+          className="hidden fixed top-0 nav-top text-white page-nav-size 
             left-[calc(100vw-4rem-20px)]
-            md:left-[calc(100vw-4.5rem-16px)]
-            lg:left-[calc(100vw-160px+2px)]
-            xl:left-[calc(100vw-10rem+2px)]
-            3xl:left-[calc(100vw-20rem+2px)]"
+            md:block md:left-[calc(100vw-4.5rem-16px)]
+            lg:block lg:left-[calc(100vw-160px+2px)]
+            xl:block xl:left-[calc(100vw-10rem+2px)]
+            3xl:block 3xl:left-[calc(100vw-20rem+2px)]"
         >
           <TOC />
         </div>
