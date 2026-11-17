@@ -1,0 +1,440 @@
+---
+title: Exploring the Tactile Illusions for Tangible UI
+date: 2023-SRPING~SUMMER
+cover: /research-hti/thumbnail.png
+number: 3
+---
+
+<MainTitle
+  title="Exploring the Tactile Illusions for Tangible UI"
+  date="2023, Spring~Summer"
+  toc="Title"
+  color="#812418"
+/>
+
+<FigureWithBg
+  src="/research-hti/actuators.png"
+  alt="an array of actuators"
+  caption="[1] An array of actuators"
+  bgcolor="#F7F7F7"
+/>
+
+<Rtags
+  researchMethods="
+    lab Experiment</br>
+    Haptic Perception</br>
+    Tangible UI</br>
+    Python</br>
+    Data Visualization"
+  intro=""
+  contributorMe="<b>ME</b><br>Experiment Design/Data Collection/Data Analysis"
+  contributorOthers="<b>F-- S-- K--</b><br>Experiment Design/Data Collection<br><b>L-- H--</b><br>Data Collection<br><b>Z-- van der Z--</b><br>Data Collection"
+/>
+
+<Divider />
+
+
+
+<SemiTitle 
+  toc="Background" 
+  title="Background" 
+/>
+
+<TextTwoColsNRows 
+  content="This study explored human back’s haptic perception when two tactile illusions were applied: the Phantom Tactile Sensation (localization) and Tactile Apparent Motion (direction perception). The results indicated challenges in localizing the vibrations on participants' backs, with answers dispersed over a large area. As for direction perception, participants had a better perception of diagonal directions. When the phantom vibrations were used, participants could also perceive the direction correctly, especially in specific directions. The study contributed to the application of the above-mentioned illusion into creating tangible user interfaces especially for people with sensory impairments (e.g., deaf-blindness)."
+  row_default="2"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+<Divider />
+
+
+
+<SemiTitle 
+  toc="Two Sensational Illusions" 
+  title="1. Intro: Two Sensational Illusions" 
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/diagram-PTS.png&&&/research-hti/diagram-TAM.png"
+  alts="illusion 1: phantom tactile sensation&&&illusion 2: tactile apparent motion"
+  captions="[2]&&&[3]"
+  bgcolors="#F7F7F7&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="<b>[2] Illusion 1: Phantom Tactile Sensation</b>
+  When two vibrators, which are placed closely on the skin, are simultaneously actuated, an illusory vibration will be perceived. When their vibration intensities are the same, the phantom vibration will be generated in the midpoint of these two vibrators.
+  
+  <b>[3] Illusion 2: Tactile Apparent Motion</b>
+  When two actuators are placed on the skin at a certain distance and vibrate in sequence with overlapped vibration time, a movement across the skin between the actuators will be perceived (SOA: Inter-stimulus Onset Asynchrony)."
+  row_default="2"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+<FigureWithBg
+  src="/research-hti/applications.png"
+  alt="applications of the illusions"
+  caption="[4] Applications of the illusions"
+  bgcolor="#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="- Social haptic communication for users with deaf-blindness (M. Plaisier & Kappers, 2021)
+  - The TaSST: tactile sleeve for social touch (Huisman et al., 2013)
+  - Vibrotactile patterns for driving information (N. H. Kim et al., 2006)
+  - Applications in game footage and sensations (Israr & Poupyrev, 2011)"
+  row_default="2"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Research Goals" 
+  title="2. Research Goals: from Theory to Applications" 
+/>
+
+<TextTwoColsNRows 
+  content="An exploratory study: This study explored the practical applications of two vibrotactile illusions by looking into the inconsistency between theoretical perception and real experience. It served as a preliminary investigation on the potential of integrating two perceptual illusions into future haptic devices oriented for building tangible user interfaces. 12 participants in total."
+  row_default="2"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Setup" 
+  title="3. Experiment Setup" 
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/setup-1.png&&&/research-hti/setup-2.png"
+  alts="experiment setup 1: apparatus&&&experiment setup 2: what the participants did"
+  captions="[5] Experiment setup 1: apparatus&&&[6] experiment setup 2: what the participants did"
+  bgcolors="#F7F7F7&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="The experimental apparatus consisted of a laptop computer, nine coin-style eccentric rotating mass (ERM) motors, and an Arduino Mega microcontroller. Besides, a chair with adjustable backrest height, and a pair of headphones were also used. Nine coin-style ERM motors were placed on the backrest of a chair forming a 3 × 3 equally spaced (2.5 centimeters) square grid.
+  
+  During the experiment, the participant sat straightly and naturally on the chair with a backrest cover, under which the vibrator array was glued to the backrest. The motor array was placed on the lower left side of the backrest. There was a distance of 3 cm between the leftmost border of the moor array and the center vertical line of the backrest. The participant was told to overlap her/his spine with the center vertical line of the backrests. The height of the chair’s backrest was always adjusted to align the center motor with the participant’s navel."
+  row_default="4"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Experiment Design-1" 
+  title="4.1 Experiment Design for Localization Perception" 
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/exp-design-1-1.png&&&/research-hti/exp-design-1-2.png"
+  alts="testing localization for Phantom Tactile Sensation: 8 conditions&&&dot grid shown to the participants"
+  captions="[7] Testing localization for Phantom Tactile Sensation: 8 conditions&&&[8] Dot grid shown to the participants"
+  bgcolors="#F7F7F7&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="<b>Testing localization for Phantom Tactile Sensation</b>
+  For localization test for Phantom Tactile Sensation, 8 different pairs of motors were switched on. A stimulus consisted of two motors vibrating simultaneously for 0.3 s. All 8 pairs were presented five times in blocked random order. After each trial, the participant spoke out the number of the perceived vibration location on a five-by-five dot grid (printed on a sheet given to her/ him). The experimenter logged the answer into another computer."
+  row_default="4"
+  row_md="2"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Experiment Design-2" 
+  title="4.2 Experiment Design for Direction Perception" 
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/exp-design-2-1.png&&&/research-hti/exp-design-2-2.png"
+  alts="testing direction perception: 8 directions&&&5 methods of generating the center vibration"
+  captions="[9] Testing direction perception: 8 directions&&&[10] 5 methods of generating the center vibration"
+  bgcolors="#F7F7F7&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="<b>Testing direction perception</b>
+  All eight different directions that went through the center motor were presented in random orders. Three vibrations were given sequentially, each lasting for 0.3 seconds. Once a vibration was finished, the next would be given instantly (i.e., the onset between two sequential vibrations could be regarded as 0.3 seconds).
+  
+  The center vibration was generated with 5 different ways. It could be by the physical motor placed on the spot. It could also be a phantom vibration created by two appropriate motors."
+  row_default="3"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/direction-options.png&&&/research-hti/CL.png"
+  alts="direction options&&&confidence levels"
+  captions="[11]&&&[12]"
+  bgcolors="#F7F7F7&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="<b>[11] Direction options</b>
+  The sheet with shown to the participant during the experiment of direction perception including selection of direction and her/his confidence level of corresponding given answer.
+  
+  <b>[12] Confidence levels</b>
+  This direction confidence would also be visualized in the subsequent data analysis."
+  row_default="2"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SemiTitle
+  toc="Task Records" 
+  title="3.1 Usability Testing: Task Records (T1 as an Example)" 
+/>
+
+<FigureWithBg
+  src="/research-hti/task-record.png"
+  alt="task records (Task 1 as an example)"
+  caption="[5] Task records (Task 1 as an example)"
+  bgcolor="#F7F7F7"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Follow-up Interview" 
+  title="3.2 Usability Testing: Usability Testing: Follow-up Interview" 
+/>
+
+<FigureWithBg
+  src="/research-hti/follow-up.png"
+  alt="follow-up interview after the test"
+  caption="[6] Follow-up interview"
+  bgcolor="#F7F7F7"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="SUS" 
+  title="4. System Usability Scale (SUS)" 
+/>
+
+<TextTwoColsNRows 
+  content="The System Usability Scale was sent out to the participants to assess their perceived product usability. There are ten interview questions.
+  
+  1. I think that I would like to use this system frequently.
+  2. I found the system unnecessarily complex.
+  3. I thought the system was easy to use.
+  4. I think that I would need the support of a technical person to be able to use this system.
+  5. I found the various functions in this system were well integrated.
+  6. I thought there was too much inconsistency in this system.
+  7. I would imagine that most people would learn to use this system very quickly.
+  8. I found the system very cumbersome to use.
+  9. I felt very confident using the system.
+  10. I needed to learn a lot of things before I could get going with this system."
+  row_default="2"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Metrics" 
+  title="5. Results and Analysis: Metrics" 
+/>
+
+<TextTwoColsNRows 
+  content="<b>Effectiveness</b>
+    This metric describes whether users are able to complete the tasks successfully. It shows: 1. All three tasks have a high success rate. 2. Task 1 was relatively easier to finish.
+  "
+  row_default="1"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<FigureWithBg
+  src="/research-hti/effectiveness.png"
+  alt="calculation of the effectiveness"
+  caption="[7] Calculation of the effectiveness"
+  bgcolor="#F7F7F7"
+/>
+
+<Divider />
+
+<TextTwoColsNRows 
+  content="<b>Efficiency</b>
+    It assess how quickly users are able to complete the tasks. All three tasks have relatively low time-based efficiency, judging by their result each. Task 1 has the highest time-based efficiency, followed by task 2 and then task 3.
+  "
+  row_default="1"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<FigureWithBg
+  src="/research-hti/efficiency.png"
+  alt="calculation of the efficiency"
+  caption="[8] Calculation of the efficiency"
+  bgcolor="#F7F7F7"
+/>
+
+<Divider />
+
+<TextTwoColsNRows 
+  content="<b>Satisfaction</b>
+    The SUS score of MyTU/e obtains an F in grade scale and not acceptable. The App lies with the last 10% among products in other studies.
+  "
+  row_default="1"
+  row_md="1"
+  row_lg="1"
+  row_3xl="1"
+/>
+
+<FigureWithBg
+  src="/research-hti/satisfaction.png"
+  alt="calculation of the satisfaction"
+  caption="[9] Calculation of the Satisfaction"
+  bgcolor="#F7F7F7"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Interview Results" 
+  title="6. Results and Analysis: From Follow-up Interview" 
+/>
+
+<TextTwoColsNRows 
+  content="<b>Feedback 1: Messy user interface</b>
+    User interface components such as icons, the application placement, as well as the distinct compartmentalized model became a problem for some of the participants. E.g., &quot;I sometimes got confused by the icon, some of them have the text and some don’t.&quot;
+    -- Code: (Q-1, P-3), (Q-2, P-1), (Q-2, P-3), (Q-2, P-4), (Q-2, P-5), (Q-4, P-1).
+    
+    <b>Feedback 2: No tutorial for the first time use</b>
+    Two responses from the follow-up interview indicated that tutorials and guidelines are missing for the first-time user. E.g., &quot;There was no tutorial or guidelines for using it.&quot;
+    -- Code:(Q-1, P-1), (Q-3, P-2).
+
+    <b>Feedback 3: Have proper customization</b>
+    Several participants said customization and personalization were not essential to be implemented into the application. One participant mentioned the un-necessity of the dynamic App localization. E.g., &quot;Customization is not that important or crucial for student, apps & tiles position should be in a fixed position.&quot;
+    -- Code:(Q-4, P-2), (Q-4, P-3),(Q-4, P-4).
+
+    <b>Feedback 4: Some functions are not working</b>
+    Some of the application's functions cannot work correctly. This could affect the effectiveness (although those functions that are not working were not tested in this research). E.g., &quot;Some of the features are not working at all, 404 page not found.&quot;
+    -- Code:(Q-1, P-2), (Q-1, P-4).
+  "
+  row_default="4"
+  row_md="3"
+  row_lg="3"
+  row_3xl="3"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Redesign" 
+  title="7. A Possible Redesign" 
+/>
+
+<FigureWithBg
+  src="/research-hti/main-1.png"
+  alt="renewed user interface of MyTU/e App"
+  caption="[10] Redesigned homepage of MyTU/e App"
+  bgcolor="#213997"
+/>
+
+<FigureWithBgOnePlusTwo
+  srcs="/research-hti/ins.png&&&/research-hti/fav.png&&&/research-hti/settings.png"
+  alts="album page&&&favorites&&&settings"
+  captions="[11]&&&[12]&&&[13]"
+  bgcolors="#F7F7F7&&&#F7F7F7&&&#F7F7F7"
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/navigation.png&&&/research-hti/new-photos.png"
+  alts="new bottom navigation&&&new photos entry"
+  captions="[13]&&&[14]"
+  bgcolors="#213997&&&#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="<b>[10]</b> The redesigned MyTU/e App features a more consistent, tidy, and attractive metro-UI style. All metro tiles own a specialized icon that help recognition, while maintaining a consistency in layout.
+    
+    <b>[12][13]</b> Classification on the functions is applied, enabled by the bottom group of filter buttons. The favorite group, comprising added functions by the user, is fixed on the UI. All these make it easier to locate a specific function when needed. 
+    
+    <b>[13]</b> The width of the bottom tags’ rounded rectangle are adjusted according to the text’s width. This width variation offers a hint that facilitates the selection.
+
+    <b>[11][14]</b> Enjoyable campus photo album
+  "
+  row_default="3"
+  row_md="2"
+  row_lg="2"
+  row_3xl="2"
+/>
+
+
+
+<Divider />
+<Divider />
+
+
+<Ending />
