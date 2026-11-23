@@ -208,86 +208,45 @@ number: 3
   row_3xl="1"
 />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<SemiTitle
-  toc="Task Records" 
-  title="3.1 Usability Testing: Task Records (T1 as an Example)" 
-/>
-
-<FigureWithBg
-  src="/research-hti/task-record.png"
-  alt="task records (Task 1 as an example)"
-  caption="[5] Task records (Task 1 as an example)"
-  bgcolor="#F7F7F7"
-/>
-
 <Divider />
 
 
 
+
 <SemiTitle
-  toc="Follow-up Interview" 
-  title="3.2 Usability Testing: Usability Testing: Follow-up Interview" 
+  toc="Procedure" 
+  title="5. Experiment Procedure" 
 />
 
 <FigureWithBg
-  src="/research-hti/follow-up.png"
-  alt="follow-up interview after the test"
-  caption="[6] Follow-up interview"
+  src="/research-hti/procedure.png"
+  alt="experiment procedure"
+  caption="[13] Experiment procedure"
   bgcolor="#F7F7F7"
-/>
-
-<Divider />
-
-
-
-<SemiTitle
-  toc="SUS" 
-  title="4. System Usability Scale (SUS)" 
 />
 
 <TextTwoColsNRows 
-  content="The System Usability Scale was sent out to the participants to assess their perceived product usability. There are ten interview questions.
+  content="<b>1. Intro</b>
+  After the participant gave informed consent, she/he was introduced to the study about its setup and cautions.
   
-  1. I think that I would like to use this system frequently.
-  2. I found the system unnecessarily complex.
-  3. I thought the system was easy to use.
-  4. I think that I would need the support of a technical person to be able to use this system.
-  5. I found the various functions in this system were well integrated.
-  6. I thought there was too much inconsistency in this system.
-  7. I would imagine that most people would learn to use this system very quickly.
-  8. I found the system very cumbersome to use.
-  9. I felt very confident using the system.
-  10. I needed to learn a lot of things before I could get going with this system."
-  row_default="2"
-  row_md="2"
-  row_lg="2"
-  row_3xl="2"
+  <b>2. Preparations</b>
+  After the introduction, participants were asked to wear a pair of noise-canceling headphones and sit naturally on the chair with the pre-attached vibration motors. The height of the chair’s backrest was adjusted so that the center motor was at the same height as the participant’s navel. She/he was requested to adjust the posture so her/his back was fully touching the chairs’ backrest.
+
+  <b>3. Pre-test</b>
+  A pre-test was performed first. Each of the nine motors was activated one by one randomly. After each vibration, the participant was asked if she/he could feel a single vibration without feeling uncomfortable. This step aimed to ensure that the hardware was functioning properly and that the participants were able to perceive all motors.
+
+  <b>4. Session 1: Localization</b>
+  Pairs of motors vibrated simultaneously. There were 8 motor pairs to be tested. The participant spoke out the perceived vibration position on the sheet of motor grid for each motor pair in random order. This was repeated 5 times each in a different random order (blocked random). Each of them performed 5 × 8 = 40 trials. A short break was given after this session.
+
+  <b>5. Session 2: Direction Perception</b>
+  As mentioned earlier, this session consisted of 40 unique vibration sequences. These 40 sequences were presented twice in blocked random order. There was a short break between two blocks. In this session, she/he was shown the sheet with numbered arrows and  requested to speak out the number of the perceived direction indicated by the arrow.
+
+  <b>6. Debriefing and Ending</b>
+  At the end of the experiment, participants were asked if they have any other questions or observations about the experiment to share. Then, they were debriefed and transferred the compensation."
+  row_default="8"
+  row_md="4"
+  row_lg="4"
+  row_3xl="4"
 />
 
 <Divider />
@@ -295,91 +254,44 @@ number: 3
 
 
 <SemiTitle
-  toc="Metrics" 
-  title="5. Results and Analysis: Metrics" 
+  toc="Data Analysis - 1" 
+  title="6.1 Data Analysis in Python: Localization - Heat Maps" 
+/>
+
+<FigureWithBgTwoCols
+  srcs="/research-hti/heat-map-1.png&&&/research-hti/heat-map-2.png"
+  alts="theoretical perceived locations&&&the heat maps of all participants’ answers"
+  captions="[14] Theoretical perceived locations&&&[15] The heat maps of all participants’ answers"
+  bgcolors="#F7F7F7&&&#F7F7F7"
 />
 
 <TextTwoColsNRows 
-  content="<b>Effectiveness</b>
-    This metric describes whether users are able to complete the tasks successfully. It shows: 1. All three tasks have a high success rate. 2. Task 1 was relatively easier to finish.
-  "
-  row_default="1"
-  row_md="1"
-  row_lg="1"
-  row_3xl="1"
+  content="Mathplotlib in Python was used to generate twelve figures, each of which was for one participant. Each figure includes eight heat maps of answers across the dot board in different motor-pair conditions. Apart from these twelve figures, there was one figure consisting of eight heat maps of overall answers. An example of a heat map can be found below. Each heat map features a five-by-five matrix of squares corresponding to the board with a five-by-five dot grid shown to the participants in the experiment. The color bar on the right indicates he mapping between the value magnitude and color intensity. The number in each square of the heat map represents the corresponding percentage of answers on the dot board.
+  
+  Participant’s heat map in the data visualization of localization: the color bar on the right indicates the mapping between the value magnitude and color intensity. The number in each square of the heat map represents the corresponding percentage of answers on the dot board."
+  row_default="4"
+  row_md="3"
+  row_lg="3"
+  row_3xl="3"
 />
 
-<FigureWithBg
-  src="/research-hti/effectiveness.png"
-  alt="calculation of the effectiveness"
-  caption="[7] Calculation of the effectiveness"
-  bgcolor="#F7F7F7"
-/>
-
-<Divider />
-
-<TextTwoColsNRows 
-  content="<b>Efficiency</b>
-    It assess how quickly users are able to complete the tasks. All three tasks have relatively low time-based efficiency, judging by their result each. Task 1 has the highest time-based efficiency, followed by task 2 and then task 3.
-  "
-  row_default="1"
-  row_md="1"
-  row_lg="1"
-  row_3xl="1"
-/>
-
-<FigureWithBg
-  src="/research-hti/efficiency.png"
-  alt="calculation of the efficiency"
-  caption="[8] Calculation of the efficiency"
-  bgcolor="#F7F7F7"
-/>
-
-<Divider />
-
-<TextTwoColsNRows 
-  content="<b>Satisfaction</b>
-    The SUS score of MyTU/e obtains an F in grade scale and not acceptable. The App lies with the last 10% among products in other studies.
-  "
-  row_default="1"
-  row_md="1"
-  row_lg="1"
-  row_3xl="1"
-/>
-
-<FigureWithBg
-  src="/research-hti/satisfaction.png"
-  alt="calculation of the satisfaction"
-  caption="[9] Calculation of the Satisfaction"
-  bgcolor="#F7F7F7"
-/>
-
-<Divider />
-
-
-
-<SemiTitle
-  toc="Interview Results" 
-  title="6. Results and Analysis: From Follow-up Interview" 
+<FigureWithBgTwoCols
+  srcs="/research-hti/heat-map-3.png&&&/research-hti/heat-map-4.png"
+  alts="calculation of the distance between the predicted perceived location and the answered location in one motor-pair condition&&&the results averaged across all the participants"
+  captions="[16] Calculation of the distance&&&[17] The results averaged across all the participants"
+  bgcolors="#F7F7F7&&&#F7F7F7"
 />
 
 <TextTwoColsNRows 
-  content="<b>Feedback 1: Messy user interface</b>
-    User interface components such as icons, the application placement, as well as the distinct compartmentalized model became a problem for some of the participants. E.g., &quot;I sometimes got confused by the icon, some of them have the text and some don’t.&quot;
-    -- Code: (Q-1, P-3), (Q-2, P-1), (Q-2, P-3), (Q-2, P-4), (Q-2, P-5), (Q-4, P-1).
-    
-    <b>Feedback 2: No tutorial for the first time use</b>
-    Two responses from the follow-up interview indicated that tutorials and guidelines are missing for the first-time user. E.g., &quot;There was no tutorial or guidelines for using it.&quot;
-    -- Code:(Q-1, P-1), (Q-3, P-2).
-
-    <b>Feedback 3: Have proper customization</b>
-    Several participants said customization and personalization were not essential to be implemented into the application. One participant mentioned the un-necessity of the dynamic App localization. E.g., &quot;Customization is not that important or crucial for student, apps & tiles position should be in a fixed position.&quot;
-    -- Code:(Q-4, P-2), (Q-4, P-3),(Q-4, P-4).
-
-    <b>Feedback 4: Some functions are not working</b>
-    Some of the application's functions cannot work correctly. This could affect the effectiveness (although those functions that are not working were not tested in this research). E.g., &quot;Some of the features are not working at all, 404 page not found.&quot;
-    -- Code:(Q-1, P-2), (Q-1, P-4).
-  "
+  content="Above([16]) is an example showing the calculation of the distance between the predicted perceived location and the answered location in one motor-pair condition (vibrated motors: motor 1 and motor 3).
+  
+  The result of localization perception:
+  
+  <b>Answers spread out over a large area</b>
+  The heat maps of all participants’ answers reveal that in each motor-pair condition, the answers are distributed over a large area of the heat map. The highest value among all the highest percentages in each motor-pair condition is only 25 percent, which lies in the heat map of the pair of motor 3 and motor 9, while the lowest value is 15 percent in the heat map of the pair of motor 4 and motor 6. 
+  
+  <b>Motor 3 and motor 9 performed the best</b>
+  Furthermore, the bar chart demonstrates that when motor 3 and motor 9 were actuated simultaneously, the participants had the smallest average distance between the answered location and the theoretically perceived location. Two motor-pair conditions (motor 1 and motor 3, motor 1 and motor 7) have the largest average distances, both of which exceed 2.5 cm."
   row_default="4"
   row_md="3"
   row_lg="3"
@@ -390,45 +302,100 @@ number: 3
 
 
 
+
 <SemiTitle
-  toc="Redesign" 
-  title="7. A Possible Redesign" 
+  toc="Data Analysis - 2" 
+  title="6.2 Data Analysis in Python: Direction Perception - Arrow Chart Mapping" 
 />
 
-<FigureWithBg
-  src="/research-hti/main-1.png"
-  alt="renewed user interface of MyTU/e App"
-  caption="[10] Redesigned homepage of MyTU/e App"
-  bgcolor="#213997"
-/>
-
-<FigureWithBgOnePlusTwo
-  srcs="/research-hti/ins.png&&&/research-hti/fav.png&&&/research-hti/settings.png"
-  alts="album page&&&favorites&&&settings"
-  captions="[11]&&&[12]&&&[13]"
+<FigureWithBgThreeCols
+  srcs="/research-hti/arrow-chart-1.png&&&/research-hti/arrow-chart-2.png&&&/research-hti/arrow-chart-3.png"
+  alts="the arrow’s color and direction represent the participants’ answered direction&&&the arrow’s width demonstrates the number of the corresponding answer&&&the arrow’s opacity reflects the average confidence level (CL) of the corresponding answer"
+  captions="[18] The arrow’s color and direction representation&&&[19] The arrow’s width&&&[20] The arrow's opacity"
   bgcolors="#F7F7F7&&&#F7F7F7&&&#F7F7F7"
 />
 
-<FigureWithBgTwoCols
-  srcs="/research-hti/navigation.png&&&/research-hti/new-photos.png"
-  alts="new bottom navigation&&&new photos entry"
-  captions="[13]&&&[14]"
-  bgcolors="#213997&&&#F7F7F7"
-/>
-
 <TextTwoColsNRows 
-  content="<b>[10]</b> The redesigned MyTU/e App features a more consistent, tidy, and attractive metro-UI style. All metro tiles own a specialized icon that help recognition, while maintaining a consistency in layout.
-    
-    <b>[12][13]</b> Classification on the functions is applied, enabled by the bottom group of filter buttons. The favorite group, comprising added functions by the user, is fixed on the UI. All these make it easier to locate a specific function when needed. 
-    
-    <b>[13]</b> The width of the bottom tags’ rounded rectangle are adjusted according to the text’s width. This width variation offers a hint that facilitates the selection.
-
-    <b>[11][14]</b> Enjoyable campus photo album
-  "
+  content="<b>[18]</b>The arrow’s color and direction represent the participants’ answered direction.
+  
+  <b>[19]</b>The arrow’s width demonstrates the number of the corresponding answer. Note that the width is continuous in real visualization.
+  
+  <b>[20]</b>The arrow’s opacity reflects the average confidence level (CL) of the corresponding answer (the CLs were normalized by dividing by the maximum given value in the experiment, which is five). Note that even when the average CL equals zero, the arrow is still visible by being given an opacity of 0.03. Also, note that the opacity is continuous in real visualization."
   row_default="3"
   row_md="2"
   row_lg="2"
   row_3xl="2"
+/>
+
+<FigureWithBg
+  src="/research-hti/arrow-chart-4.png"
+  alt="the results of direction perception"
+  caption="[21] The results of direction perception"
+  bgcolor="#F7F7F7"
+/>
+
+<TextTwoColsNRows 
+  content="The result of localization perception:
+  
+  <b>Difference in dispersion level among directions</b>
+  For vertical and horizontal directions, the participants’ answers tend to disperse in different directions from the actual generated direction, especially when the actual directions are from left to right and from right to left. Whereas for diagonal directions, the answered directions have a relatively stronger trend to be in line with the actual directions’, compared with the vertical and horizontal ones.
+  
+  <b>Best identification from bottom left to top right</b>
+  Participants have the best identification of the direction when the direction is from the bottom left to the top right. This can be seen by comparing the figures in Page 09, in which the widest arrow in each center-vibration condition has the same direction as the actual one, and its width is significantly larger than those of the other arrows. When the center vibration was generated by phantom vibration, the participants still tended to perceive correctly the direction. This phenomenon was more pronounced when the actual directions were from the bottom left to the top right and from the top right to the bottom left.
+  
+  <b>Actual motor for center vibration not always the best</b>
+  Moreover, when the center vibration was generated by an actual motor, the participants didn’t always have the best performance in identifying the direction. For example, when a direction was from top to bottom, there were more correct recognitions of it when the phantom vibration was used for the center vibration (motor 4 and motor 6, motor 3 and motor 7)."
+  row_default="6"
+  row_md="3"
+  row_lg="3"
+  row_3xl="3"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Take-away" 
+  title="7. Take-away" 
+/>
+
+<TextTwoColsNRows 
+  content="<b>Dispersion of localization of phantom vibration</b>
+  In each motor-pair condition during the localization session, participants’ responses were noticeably scattered across the area of the motor grid. One possible explanation is that participants faced challenges in distinguishing the related locations between motors in the back. Firstly, participants did not know the boundaries of the vibration or the size of the dot board beforehand. Secondly, even though the illustration included an identification of the distance between the rightmost of the dot board and the spine, it is difficult for the participants to judge how long that distance is on their backs. Another potential reason is that the vibrations may have been spread out to an extent that made it challenging to pinpoint the exact source location. A motor’s vibration covers a certain area of the skin, which could be large enough so that the participant would fail to locate the center vibration point.
+  
+  <b>Higher correct recognition rate in diagonal</b>
+  As for the direction condition, the correct identification of the direction in different center-vibration conditions happens more often when the directions are diagonal. Two possible reasons account for the different effectiveness of Tactile Apparent Motion on diagonal and non-diagonal directions. One is the variation of distance between subsequent vibrations.  In the present study’s experiment, this distance was larger when the direction was diagonal due to the three-by-three motor matrix, which could make perceiving the direction easier. It is possible that in the vertical and horizontal direction conditions, the vibrations were too close and that the participants had difficulties distinguishing the vibrations. judge how long that distance is on their backs. The other is related to the aforementioned problem of locating the vibration, which results in participants’ confusion about the relative locations of sequentially activated vibrations, and further caused a negative impact on their direction judgment.
+  
+  <b>Possibility to use phantom vibration in apparent motion</b>
+  In some situations, substituting the vibration from actual motors with phantom vibrations from two simultaneously vibrated motors leads the participants to perceive the direction correctly. This validated some previous trials of researchers who applied the same technique aiming at simplifying the haptic devices (e.g., Israr & Poupyrev, 2011)."
+  row_default="6"
+  row_md="3"
+  row_lg="3"
+  row_3xl="3"
+/>
+
+<Divider />
+
+
+
+<SemiTitle
+  toc="Reference" 
+  title="8. Reference" 
+/>
+
+<TextTwoColsNRows 
+  content="Plaisier, M. A., & Kappers, A. M. L. (2021). Social Haptic Communication mimicked with vibrotactile patterns: an evaluation by users with deafblindness. In J. Lazar, J. H. Feng, & F. Hwang (Eds.), ASSETS '21: The 23rd International ACM SIGACCESS Conference on Computers and Accessibility (pp. 1-3). [88] Association for Computing Machinery, Inc. https://doi.org/10.1145/3441852.3476528
+  
+  Israr, A., & Poupyrev, I. (2011). Tactile brush. Proceedings of the International Conference on Human Factors in Computing Systems, CHI 2011, Vancouver, BC, Canada, May 7-12, 2011. https://doi.org/10.1145/1978942.1979235
+  
+  Kim, N. H., Seo, N. C., Lee, N. J., Ryu, N. J., Yu, N. S., & Lee, N. S. (2006b). Vibrotactile display for driving safety information. 2006 IEEE Intelligent Transportation Systems Conference. https://doi.org/10.1109/itsc.2006.1706802
+  
+  Huisman, G., Frederiks, A. D., Van Dijk, B., Hevlen, D., & Krose, B. (2013). The TASST: Tactile sleeve for social touch. 2013 World Haptics Conference (WHC). https://doi.org/10.1109/whc.2013.6548410"
+  row_default="6"
+  row_md="3"
+  row_lg="3"
+  row_3xl="3"
 />
 
 
